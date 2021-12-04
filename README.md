@@ -101,7 +101,7 @@ image: String / Default
 
 ### Trello
 
-[Link to your trello board](https://trello.com) or picture of your physical board
+[Link to your trello board](https://trello.com/b/fUBvbpg5/kanban-template) or picture of your physical board
 
 ### Git
 
