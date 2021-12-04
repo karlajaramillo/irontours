@@ -1,0 +1,27 @@
+{
+  "name": "irontours",
+  "version": "1.0.0",
+  "description": "Iron tours for ironhackers - Based on Node Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karlajaramillo/irontours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karlajaramillo/irontours/issues"
+  },
+  "homepage": "https://github.com/karlajaramillo/irontours#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.0.14",
+    "nodemon": "^2.0.15"
+  }
+}
