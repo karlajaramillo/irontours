@@ -9,7 +9,7 @@ function getSignup(req, res) {
 
 function getLogin(req, res) {
   const { err } = req.query;
-  res.render('login');
+  res.render('login', { err });
 }
 
 const emailRegex = /^\S+@\S+\.\S+$/;
