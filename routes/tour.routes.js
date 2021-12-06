@@ -2,6 +2,8 @@ const router = require("express").Router();
 
 const Tour = require("../models/tour.model");
 
+const User = require("../models/user.model");
+
 const fileUploader = require("../config/cloudinary.config");
 
 router.get("/tours/create", async (req, res) => {
