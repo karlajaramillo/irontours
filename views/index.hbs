@@ -4,3 +4,15 @@
   <a href='/login'>login</a>
   <a href='/signup'>signup</a>
 </div>
+
+<div>
+  {{#each allTours}}
+    <h1>{{name}}</h1>
+    <p>{{description}}</p>
+    <p>{{tourGuide.name}}</p>
+    <img src="{{image}}" alt="{{name}}">
+    <a href="/tours/{{_id}}">See more</a>
+  {{/each}}
+
+  
+</div>

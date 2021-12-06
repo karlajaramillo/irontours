@@ -1,6 +1,11 @@
-function getHome(req, res) {
+
+const Tour = require("../models/tour.model");
+
+async function getHome (req, res) {
+  const allTours = await Tour.find().populate('tourGuide');
+
   console.log('getHome');
-  res.render('index');
+  res.render('index', { allTours });
 }
 
 function getPrivate(req, res) {
