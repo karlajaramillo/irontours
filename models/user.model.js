@@ -11,6 +11,9 @@ const UserSchema = new Schema({
     type: String,
     required: [true, 'Please provide a valid password'],
   },
+  name: {
+    type: String,
+  },
   role: {
     type: String,
     enum: ['admin', 'guide', 'user'],

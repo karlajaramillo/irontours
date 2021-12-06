@@ -1,0 +1,35 @@
+{{!-- views/tour-views/tour-create.hbs --}}
+
+<h2>Create a Tour</h2>
+<div class="">
+  <div class="">
+    <form action="/tours/create" method="post" enctype="multipart/form-data"> {{!-- !!! --}}
+      <div class="">
+        <label>Name:
+          <input type="text" name="name" class="" />
+        </label>
+      </div>
+
+  <div class="">
+    <label>Description:
+      <textarea name="description" class=""> </textarea>
+    </label>
+  </div>
+
+  <select name="tourGuide" id="tour-guide" multiple>
+    <option selected value=""></option>  
+    {{#each guides}}  {{!--All the tour guides from the Model "User" and collection: users --}}
+      <option value="{{this._id}}">{{this.name}}</option>{{!--From the collection--> celebrities --}}
+    {{/each}}
+  </select>
+
+    <div class="">
+      <label>Image:
+        <input type="file" name="tour-cover-image" class="" />
+      </label>
+    </div>
+
+    <button type="submit" class="">Create</button>
+  </form>
+  </div>
+</div>
