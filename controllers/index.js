@@ -1,7 +1,6 @@
+const Tour = require('../models/tour.model');
 
-const Tour = require("../models/tour.model");
-
-async function getHome (req, res) {
+async function getHome(req, res) {
   const allTours = await Tour.find().populate('tourGuide');
 
   console.log('getHome');

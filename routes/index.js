@@ -4,5 +4,4 @@ const { isLoggedOut, isLoggedIn } = require('../middlewares/auth.middlewares');
 
 router.get('/', isLoggedOut, getHome).get('/private', isLoggedIn, getPrivate);
 
-
 module.exports = router;

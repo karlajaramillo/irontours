@@ -1,6 +1,5 @@
 const { Schema, model } = require('mongoose');
 
-
 const TourSchema = new Schema({
   name: {
     type: String,
