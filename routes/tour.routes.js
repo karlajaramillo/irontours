@@ -25,5 +25,6 @@ router.post("/tours/create", fileUploader.single("tour-cover-image"), async (req
         console.error(error);
     }
 
-
 })
+
+module.exports = router;

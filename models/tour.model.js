@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 
+
 const TourSchema = new Schema({
   name: {
     type: String,
@@ -10,14 +11,14 @@ const TourSchema = new Schema({
   description: {
     type: String,
     required: [true, 'Please provide a valid password'],
-    minLength: 500,
+    minLength: 5,
   },
   image: {
     type: String,
     default: '/images/tours/default-tour.jpg',
   },
   tourGuide: {
-    type: Schema.Type.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: 'User',
   },
 });
