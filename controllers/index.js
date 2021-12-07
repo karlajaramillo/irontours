@@ -5,7 +5,7 @@ async function getHome(req, res) {
   const allTours = await Tour.find().populate('tourGuide');
   const isLoggedIn = req.session.currentUser ? true : false;
 
-  console.log('getHome');
+  // console.log('getHome');
   res.render('index', { allTours, isLoggedIn });
 }
 

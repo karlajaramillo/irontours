@@ -15,7 +15,7 @@ router.post(
         { name, email, image: req.file.path },
         { new: true }
       );
-      console.log(newUser);
+      //   console.log(newUser);
       res.redirect('/profile');
     } catch (err) {
       console.log(err);

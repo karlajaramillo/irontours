@@ -47,8 +47,8 @@ async function signup(req, res) {
       email,
       password: hashedPassword,
     });
-    console.log('newuser', newUser);
-    req.session.currentUser = newUser;
+    // console.log('newuser', newUser);
+    req.session.currentUser = newUser._doc;
     return res.redirect('/profile');
   } catch (err) {
     if (isValidationError(err)) {

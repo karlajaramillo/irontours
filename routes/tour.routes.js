@@ -20,7 +20,7 @@ router.post(
   async (req, res) => {
     try {
       const { name, description, tourGuide } = req.body;
-      console.log(req.body);
+      // console.log(req.body);
 
       const newTour = await Tour.create({
         name,
@@ -28,7 +28,7 @@ router.post(
         tourGuide,
         image: req.file.path,
       });
-      console.log(newTour);
+      // console.log(newTour);
       res.redirect('/');
     } catch (error) {
       console.error(error);
