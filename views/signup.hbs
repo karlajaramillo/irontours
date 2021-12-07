@@ -1,11 +1,30 @@
-<form action='/signup' method='POST'>
-  <label for='email'>email</label>
-  <input type='email' name='email' required />
-  <label for='password'>password</label>
-  <input type='password' name='password' required />
-  <button type='submit'>signup</button>
-</form>
+<div class='signup-view'>
+  <div class='signup-container'>
 
-{{#if err}}
-  <p>{{err}}</p>
-{{/if}}
+    <form action='/signup' method='POST' class='signup-form'>
+      {{! <label for='email'>email</label> }}
+      <img src='/images/logo.png' alt='IronTours Logo' class='signup-logo' />
+
+      <input
+        type='email'
+        name='email'
+        placeholder='Email'
+        class='signup-input'
+        required
+      />
+      {{! <label for='password'>password</label> }}
+      <input
+        type='password'
+        name='password'
+        placeholder='Password'
+        class='signup-input'
+        required
+      />
+      <button type='submit' class='signup-btn'>Sign up</button>
+    </form>
+
+    {{#if err}}
+      <p class='signup-error'>{{err}}</p>
+    {{/if}}
+  </div>
+</div>
