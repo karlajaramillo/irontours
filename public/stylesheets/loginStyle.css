@@ -1,0 +1,87 @@
+.login-view,
+.signup-view,
+.create-tour-view {
+  height: 100vh;
+  background: url(../images/login-bgr.jpg) no-repeat left top;
+  background-size: cover;
+  position: relative;
+  font-family: 'Rubik', sans-serif;
+}
+
+.login-view h1 {
+  /* color: rgb(71, 66, 66); */
+}
+
+.login-container,
+.signup-container,
+.create-tour-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 95%;
+  width: 500px;
+  background-color: rgba(81, 53, 87, 0.5);
+  -webkit-box-shadow: 0 2.5rem 8rem 2rem rgb(0 0 0 / 6%);
+  box-shadow: 0 2.5rem 8rem 2rem rgb(0 0 0 / 6%);
+  padding: 50px 20px;
+  border-radius: 10px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.login-form,
+.signup-form,
+.create-tour-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-logo,
+.signup-logo,
+.create-tour-logo {
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.login-input,
+.login-btn,
+.signup-input,
+.signup-btn,
+.create-tour-input,
+.create-tour-btn,
+.login-error,
+.signup-error {
+  padding: 10px;
+  max-width: 95%;
+  width: 350px;
+  margin: 10px 0;
+  /* border-radius: 5px; */
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  /* background-color: rgb(74, 37, 83); */
+  /* color: #fff; */
+}
+
+.login-btn,
+.signup-btn,
+.create-tour-btn {
+  font-weight: 400;
+  background-color: rgb(40, 25, 41);
+  color: rgb(196, 173, 173);
+}
+
+.login-error,
+.signup-error,
+.create-tour-error {
+  color: rgb(243, 234, 234);
+  background-color: rgb(114, 25, 40);
+  margin: 0 auto;
+  text-align: center;
+}
