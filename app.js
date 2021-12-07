@@ -22,4 +22,6 @@ app.use('/', tourRoutes);
 const userRoutes = require('./routes/user.routes');
 app.use('/', userRoutes);
 
+require('./error-handling')(app);
+
 module.exports = app;
