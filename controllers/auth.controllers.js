@@ -49,7 +49,7 @@ async function signup(req, res) {
     });
     console.log('newuser', newUser);
     req.session.currentUser = newUser;
-    return res.redirect('/private');
+    return res.redirect('/profile');
   } catch (err) {
     if (isValidationError(err)) {
       return res.redirect('/signup?err=validation error');
@@ -82,7 +82,7 @@ async function login(req, res) {
     if (hasCorrectPassword) {
       const { password, ...currentUser } = user;
       req.session.currentUser = currentUser;
-      return res.redirect('/private');
+      return res.redirect('/profile');
     }
     return res.redirect('/login?err=wrong password');
   } catch (err) {

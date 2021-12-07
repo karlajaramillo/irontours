@@ -31,8 +31,12 @@
           <nav class='primary-nav'>
             <ul class='nav-list'>
               <li><a href='/'>Home</a></li>
-              <li><a href='/login'>Login</a></li>
-              <li><a href='/signup'>Signup</a></li>
+              {{#if isLoggedIn}}
+                <li><a href='/logout'>Log Out</a></li>
+              {{else}}
+                <li><a href='/login'>Login</a></li>
+                <li><a href='/signup'>Signup</a></li>
+              {{/if}}
               {{! <li><a href="/logout">Logout</a></li> }}
             </ul>
           </nav>
@@ -40,8 +44,13 @@
         <div class='dropdown-menu hidden'>
           <ul>
             <li><a href='/'>Home</a></li>
-            <li><a href='/login'>Login</a></li>
-            <li><a href='/signup'>Signup</a></li>
+            {{#if isLoggedIn}}
+              <li><a href='/logout'>Log Out</a></li>
+            {{else}}
+              <li><a href='/login'>Login</a></li>
+              <li><a href='/signup'>Signup</a></li>
+            {{/if}}
+
             {{! <li><a href="/logout">Logout</a></li> }}
           </ul>
         </div>

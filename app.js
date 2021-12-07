@@ -19,4 +19,7 @@ app.use('/', authRoutes);
 const tourRoutes = require('./routes/tour.routes');
 app.use('/', tourRoutes);
 
+const userRoutes = require('./routes/user.routes');
+app.use('/', userRoutes);
+
 module.exports = app;

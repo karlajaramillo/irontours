@@ -1,0 +1,48 @@
+<div class='profile-view'>
+  {{#if user.name}}
+    <h1>Hello {{user.name}}</h1>
+  {{else}}
+    <h1> Hello Ironhacker!</h1>
+  {{/if}}
+  <img src={{user.image}} alt={{user.name}} />
+  <p>Upload a new profile image:</p>
+
+  <form
+    action='/users/update/{{user._id}}'
+    method='post'
+    enctype='multipart/form-data'
+    class='create-tour-form'
+  >
+    <input
+      type='text'
+      name='name'
+      class='create-tour-input'
+      placeholder='Username'
+    />
+    <input
+      type='email'
+      class='create-tour-input'
+      placeholder='Email'
+      name='email'
+    />
+
+    {{! <label>Image: }}
+    <input type='file' name='user-profile-image' class='create-tour-image' />
+    {{! </label> }}
+    <button type='submit' class='create-tour-btn'>Create</button>
+  </form>
+
+  <p>Email: {{user.email}}</p>
+  <p>User role: {{user.role}}</p>
+  {{#each user.bookedTours}}
+    <h4>Name: {{user.name}}</h4>
+    <p>Description: {{user.description}}</p>
+    <img src='{{user.image}}' alt='' />
+    <p>Tour guide: {{user.tourGuide.name}}</p>
+  {{/each}}
+
+  <form action='/logout' method='POST'>
+    <button type='submit'>logout</button>
+  </form>
+
+</div>

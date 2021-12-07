@@ -40,8 +40,12 @@ router.post(
 router.get('/tours/:id', async (req, res) => {
   const { id } = req.params;
   const tour = await Tour.findById(id);
+  const isLoggedIn = req.session.currentUser ? true : false;
 
-  res.render('tour-views/tour-details', tour);
+  res.render('tour-views/tour-details', {
+    tour,
+    isLoggedIn,
+  });
 });
 
 module.exports = router;

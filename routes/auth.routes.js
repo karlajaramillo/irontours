@@ -11,6 +11,7 @@ const { isLoggedOut, isLoggedIn } = require('../middlewares/auth.middlewares');
 router
   .get('/signup', isLoggedOut, getSignup)
   .get('/login', isLoggedOut, getLogin)
+  .get('/logout', isLoggedIn, logout)
   .post('/signup', isLoggedOut, signup)
   .post('/login', isLoggedOut, login)
   .post('/logout', isLoggedIn, logout);
