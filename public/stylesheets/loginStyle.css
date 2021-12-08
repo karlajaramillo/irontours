@@ -55,7 +55,8 @@
 .create-tour-input,
 .create-tour-btn,
 .login-error,
-.signup-error {
+.signup-error,
+.profile-form-btn {
   padding: 10px;
   max-width: 95%;
   width: 350px;
@@ -71,7 +72,8 @@
 
 .login-btn,
 .signup-btn,
-.create-tour-btn {
+.create-tour-btn,
+.profile-form-btn {
   font-weight: 400;
   background-color: rgb(40, 25, 41);
   color: rgb(196, 173, 173);

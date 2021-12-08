@@ -10,11 +10,10 @@ router.post(
     try {
       const { name, email } = req.body;
       const { id } = req.params;
-      const newUser = await User.findByIdAndUpdate(
-        id,
-        { name, email, image: req.file.path },
-        { new: true }
-      );
+      const update = req.file?.path
+        ? { name, email, image: req.file.path }
+        : { name, email };
+      const newUser = await User.findByIdAndUpdate(id, update, { new: true });
       //   console.log(newUser);
       res.redirect('/profile');
     } catch (err) {
