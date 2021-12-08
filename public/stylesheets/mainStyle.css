@@ -1,0 +1,129 @@
+/* Main page */
+.main-flex {
+  font-family: 'Lato', sans-serif;
+  color: #162945;
+  display: flex;
+  flex-direction: column;
+  /* font-family: 'Roboto', sans-serif; */
+}
+.main-wrapper-img {
+  background-image: url(../images/background/main.png);
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main-wrapper-img h1 {
+  color: #fff;
+  font-family: 'Lobster two';
+  font-size: 3rem;
+  text-shadow: 1px 1px 10px #000;
+}
+
+.fa-angle-double-down {
+  color: #fff;
+  font-size: 3rem;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tour-cards {
+  padding: 40px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tour-cards a {
+  color: #fff;
+  padding: 10px 30px;
+  background-color: #162945;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+}
+
+.tour-cards a:hover {
+  background-color: #e1ab52;
+}
+
+.tour-card-each {
+  /* padding-top: 20px; */
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+
+}
+
+.tour-card-each .details-btn {
+  align-self: end;
+  margin: 20px 0 40px 0;
+}
+
+.tour-wrapper-img {
+  height: 50vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1000;
+}
+
+.tour-card-each h1 {
+  z-index: 2000;
+  position: relative;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 1px 1px 10px #000;
+}
+
+ 
+
+/*
+  ======================================
+  Media queries
+  ======================================
+*/
+
+@media all and (min-width: 750px) {
+  .tour-card-each  {
+    flex: 1 1 calc(50% -  4%);
+    max-width: 50%;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+}
+
+
+@media all and (min-width: 1000px) {
+  .tour-card-each  {
+    flex: 1 1 calc(33.333333% -  4%);
+    max-width: 33.333333%;
+  }
+}
+
+
+
+
