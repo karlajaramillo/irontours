@@ -1,8 +1,8 @@
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 
-// const { NODE_ENV, SESSION_SECRET, MONGODB_URI } = process.env;
-const { NODE_ENV, SESSION_SECRET, MONGODB_URL } = process.env;
+const { NODE_ENV, SESSION_SECRET, MONGODB_URI } = process.env;
+// const { NODE_ENV, SESSION_SECRET, MONGODB_URL } = process.env;
 
 const isProduction = NODE_ENV === 'production';
 
@@ -28,8 +28,8 @@ function sessionInit(app) {
       },
       // save the cookie in mongo db
       store: MongoStore.create({
-        // mongoUrl: MONGODB_URI,
-        mongoUrl: MONGODB_URL,
+        mongoUrl: MONGODB_URI,
+        // mongoUrl: MONGODB_URL,
         // time to live, how long we should save this cookie
         ttl: 60 * 60 * 24,
       }),
