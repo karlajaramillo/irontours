@@ -43,9 +43,12 @@
         </div>
         <div class='profile-form-group profile-image'>
           <img
+          class='user-profile-image'
             src={{user.image}}
-            alt={{user.name}}
-            class='user-profile-image'
+            alt={{#if user.name}}{{user.name}}
+    {{else}}
+    'Ironhacker'
+    {{/if}} 
           />
           <input
             type='file'
