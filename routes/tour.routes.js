@@ -39,9 +39,10 @@ router.post(
 // CRUD - Read
 router.get('/tours/:id', async (req, res) => {
   const { id } = req.params;
-  const tour = await Tour.findById(id);
+  const tour = await Tour.findById(id).populate('tourGuide');
   const isLoggedIn = req.session.currentUser ? true : false;
-
+  console.log(tour)
+  console.log(tour.tourGuide.name)
   res.render('tour-views/tour-details', {
     tour,
     isLoggedIn,

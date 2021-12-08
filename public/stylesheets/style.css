@@ -75,6 +75,8 @@ ul {
 
 body {
   font: 14px 'Open Sans', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f2f6f9;
 }
 
 /*
@@ -83,10 +85,8 @@ body {
   ======================================
 */
 
-.padding-top-nav {
-  /* padding-top: 100px; */
-}
 .navbar-fixed {
+  background-color: #233044;
   position: fixed;
   min-width: 100%;
   box-shadow: 5px 5px 15px rgba(34, 34, 34, 0.3);
@@ -102,7 +102,8 @@ body {
 }
 
 .dropdown-button:hover {
-  color: #33b3b7;
+  /* color: #33b3b7; */
+  color: #895968;
 }
 
 .logo a {
@@ -111,7 +112,8 @@ body {
 }
 
 .logo a:hover {
-  color: #33b3b7;
+  /* color: #33b3b7; */
+  color: #895968;
 }
 
 .logo-img {
@@ -119,7 +121,9 @@ body {
 }
 
 .nav-flex {
-  background-color: #3f4144;
+  /* background-color: #3f4144; */
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 0.7rem;
@@ -144,7 +148,8 @@ body {
 }
 
 .nav-list a:hover {
-  border-bottom: 1px solid #33b3b7;
+  /* border-bottom: 1px solid #33b3b7; */
+  border-bottom: 1px solid #4b395e;
 }
 
 .nav-list li {
@@ -169,11 +174,14 @@ body {
 }
 
 .dropdown-menu {
+  max-width: 1200px;
+  margin: 0 auto;
   position: fixed;
   width: 100%;
   z-index: 2000;
   padding: 0 3em;
-  background-color: rgba(34, 34, 34, 0.9);
+  /* background-color: rgba(34, 34, 34, 0.9); */
+  background-color: rgb(242 246 249);
   text-transform: uppercase;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
@@ -181,7 +189,8 @@ body {
 }
 
 .dropdown-menu li {
-  border-top: 1px solid rgb(255 255 255 / 37%);
+  /* border-top: 1px solid rgb(255 255 255 / 37%); */
+  border-top: 1px solid rgb(22 41 69 / 16%);
 }
 
 .dropdown-menu li:first-child {
@@ -190,15 +199,18 @@ body {
 
 .dropdown-menu a {
   font-family: 'Rubik', sans-serif;
-  color: #fff;
+  /* color: #fff; */
+  color: #233044;
   display: block;
   padding: 1.2em 0;
   transition: all 0.2s linear;
 }
 
 .dropdown-menu a:hover {
-  color: #33b3b7;
-  background: rgb(118 112 112 / 24%);
+  /* color: #33b3b7; */
+  /* color: #4b395e; */
+  /* background: rgb(75 57 94 / 24%); */
+  background-color: rgb(35 48 68 / 20%)
 }
 
 @media all and (min-width: 750px) {

@@ -1,17 +1,29 @@
-<h1>Welcome</h1>
 
-<div>
-  <a href='/login'>login</a>
-  <a href='/signup'>signup</a>
+  {{!-- <a href='/login'>login</a>
+  <a href='/signup'>signup</a> --}}
+<div class="main-flex">
+  <div class="main-wrapper-img">
+    <h1>Ironhackers around the world</h1>
+    <i class="fas fa-angle-double-down"></i>
+  </div>
+  <div class="tour-cards">
+    {{#each allTours}}
+      <div class="tour-card-each">
+        {{!-- <p>{{description}}</p>
+        <p>{{tourGuide.name}}</p> --}}
+        <div class="tour-img-cover">
+            <div class="tour-wrapper-img" style="background-image: url('{{image}}');">
+          {{!-- <img src='{{image}}' alt='{{name}}' /> --}}
+          </div>
+        </div>
+        <h1>{{name}}</h1>
+        <div class="details-btn">
+          <a href='/tours/{{_id}}'>Discover</a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
 </div>
 
-<div>
-  {{#each allTours}}
-    <h1>{{name}}</h1>
-    <p>{{description}}</p>
-    <p>{{tourGuide.name}}</p>
-    <img src='{{image}}' alt='{{name}}' />
-    <a href='/tours/{{_id}}'>See more</a>
-  {{/each}}
 
-</div>
+
