@@ -44,12 +44,14 @@ router.get('/tours/:id', async (req, res) => {
   const tour = await Tour.findById(id).populate('tourGuide');
   const isLoggedIn = req.session.currentUser ? true : false;
   const isAdmin = req.session.currentUser?.role === 'admin' ? true : false;
+  const isUser = isLoggedIn && !isAdmin;
   console.log(tour);
   console.log(tour.tourGuide.name);
   res.render('tour-views/tour-details', {
     tour,
     isLoggedIn,
     isAdmin,
+    isUser,
   });
 });
 
@@ -81,11 +83,18 @@ router.post(
       { new: true }
     );
     console.log(tour);
-    // res.json(tour)
     res.redirect('/');
   }
 );
 
-// CRUD - Update - DELETE
+// CRUD - DELETE
+router.get('/tours/:id/delete', isAdmin, async (req, res) => {
+  const { id } = req.params;
+  const tour = await Tour.findByIdAndDelete(id);
+  res.redirect('/');
+})
+
+
+
 
 module.exports = router;

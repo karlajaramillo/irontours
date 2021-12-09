@@ -69,10 +69,11 @@
     <div class='profile-bookings'>
       <h2>Your bookings</h2>
       {{#each user.bookedTours}}
-        <h4>Name: {{user.name}}</h4>
-        <p>Description: {{user.description}}</p>
-        <img src='{{user.image}}' alt='' />
-        <p>Tour guide: {{user.tourGuide.name}}</p>
+        {{!-- <h4>Name: {{user.name}}</h4> --}}
+        <h4>Name: {{this.name}}</h4>
+        <p>Description: {{this.description}}</p>
+        <img src='{{this.image}}' alt='' />
+        {{!-- <p>Tour guide: {{this.tourGuide.name}}</p> --}}
       {{/each}}
     </div>
   </main>

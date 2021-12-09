@@ -22,4 +22,18 @@ router.post(
   }
 );
 
+// CRUD - Read
+router.get('/tours/:id/book', async (req, res) => {
+  const userId = req.session.currentUser._id;
+  const { id } = req.params;
+
+  const bookedTour = await User.findByIdAndUpdate(userId,  {
+    $push: { bookedTours: id  }
+  }, { new: true });
+
+  console.log(bookedTour)
+
+  res.redirect('/profile')
+})
+
 module.exports = router;
