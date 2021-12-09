@@ -6,8 +6,10 @@ const User = require('../models/user.model');
 
 const fileUploader = require('../config/cloudinary.config');
 
+const { isAdmin } = require('../middlewares/auth.middlewares');
+
 // CRUD - Create
-router.get('/tours/create', async (req, res) => {
+router.get('/tours/create', isAdmin, async (req, res) => {
   const guides = await User.find({ role: 'guide' });
 
   res.render('tour-views/tour-create', { guides });
@@ -41,12 +43,29 @@ router.get('/tours/:id', async (req, res) => {
   const { id } = req.params;
   const tour = await Tour.findById(id).populate('tourGuide');
   const isLoggedIn = req.session.currentUser ? true : false;
+  const isAdmin = req.session.currentUser?.role === "admin" ? true : false;
   console.log(tour)
   console.log(tour.tourGuide.name)
   res.render('tour-views/tour-details', {
     tour,
     isLoggedIn,
+    isAdmin
   });
 });
+
+// CRUD - Update - only Admin
+router.get('/tours/:id/edit', isAdmin, async (req, res) => {
+  const { id } = req.params;
+  const tour = await Tour.findById(id).populate('tourGuide');
+  const guides = await User.find({ role: 'guide' });
+  //const user = req.session.currentUser;
+  res.render('tour-views/tour-update',  { tour, guides});
+});
+
+// CRUD - Update - POST
+
+
+
+// CRUD - Update - DELETE
 
 module.exports = router;

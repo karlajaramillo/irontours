@@ -61,6 +61,10 @@
         </div>
         <button type='submit' class='profile-form-btn'>Save Changes</button>
       </form>
+      {{#ifEquals user.role "admin"}}
+        <a href="/tours/create">Create a Tour</a>
+      {{/ifEquals}}
+      
     </div>
     <div class='profile-bookings'>
       <h2>Your bookings</h2>
