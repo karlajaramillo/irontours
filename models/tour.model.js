@@ -11,6 +11,7 @@ const TourSchema = new Schema({
     type: String,
     required: [true, 'Please provide a valid password'],
     minLength: 5,
+    trim: true,
   },
   image: {
     type: String,

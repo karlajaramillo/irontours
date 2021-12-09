@@ -8,4 +8,8 @@
   <p>Description: {{tour.description}}</p>
   <img src='{{tour.image}}' alt='' />
   <p>Tour guide: {{tour.tourGuide.name}}</p>
+  {{#if isAdmin}}
+    <a href="/tours/{{tour._id}}/edit">Update Tour</a>
+  {{/if}}
+
 </div>
