@@ -12,13 +12,14 @@
         {{!-- <p>{{description}}</p>
         <p>{{tourGuide.name}}</p> --}}
         <div class="tour-img-cover">
-            <div class="tour-wrapper-img" style="background-image: url('{{image}}');">
-          {{!-- <img src='{{image}}' alt='{{name}}' /> --}}
+          <div class="tour-wrapper-img" style="background-image: url('{{image}}');">
+            {{!-- <div class="tour-wrapper-img" style="background-image: linear-gradient(to bottom right, rgb(235 207 9 / 65%), rgb(235 207 9 / 65%)), url('{{image}}');"> --}}
+            {{!-- <img src='{{image}}' alt='{{name}}' /> --}}
+            <h1>{{name}}</h1>
+            <div class="details-btn">
+              <a href='/tours/{{_id}}'>Discover</a>
+            </div>
           </div>
-        </div>
-        <h1>{{name}}</h1>
-        <div class="details-btn">
-          <a href='/tours/{{_id}}'>Discover</a>
         </div>
       </div>
     {{/each}}
