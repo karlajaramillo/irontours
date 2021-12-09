@@ -38,7 +38,7 @@
 }
 
 .tour-cards {
-  padding: 40px 30px;
+  /* padding: 40px 30px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -54,6 +54,7 @@
   font-size: 1rem;
   text-transform: uppercase;
   transition: all 0.2s linear;
+  border: 1px solid #fff;
 }
 
 .tour-cards a:hover {
@@ -68,12 +69,12 @@
 }
 
 .tour-card-each .details-btn {
-  align-self: end;
+  /* align-self: end; */
   margin: 20px 0 40px 0;
 }
 
 .tour-wrapper-img {
-  height: 50vh;
+  height: 30vh;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -83,19 +84,36 @@
   align-items: center;
   flex-direction: column;
   z-index: -1000;
+  border-bottom: 1px solid #fff;
+  position: relative;
 }
 
 .tour-card-each h1 {
-  z-index: 2000;
+  /* z-index: 2000;
   position: relative;
   bottom: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   color: #fff;
   font-size: 2rem;
   text-transform: uppercase;
-  text-align: center;
+  /* text-align: center; */
   text-shadow: 1px 1px 10px #000;
+}
+
+
+/* .tour-wrapper-img::after {
+  content: ""; 
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(230 100 101 / 10%), rgb(230 100 101 / 10%));
+    z-index: 1;
+} */
+
+.tour-card-each > * {
+  z-index: 100;
 }
 
 /*
@@ -110,12 +128,13 @@
     max-width: 50%;
     margin-right: 2%;
     margin-left: 2%;
+    margin-bottom: 4%;
   }
 }
 
 @media all and (min-width: 1000px) {
   .tour-card-each {
-    flex: 1 1 calc(33.333333% - 4%);
+    flex: 0 0 calc(33.333333% - 4%);
     max-width: 33.333333%;
   }
 }
