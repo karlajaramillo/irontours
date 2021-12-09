@@ -2,8 +2,10 @@
 <div class='create-tour-view'>
   <div class='create-tour-container'>
     <img src='/images/logo.png' alt='Ironhack-logo' class='create-tour-logo' />
+    <p>{{tour._id}}</p>
+     <p>{{tour.name}}</p>
     <form
-      action='/tours/create'
+      action='/tours/{{tour._id}}/edit'
       method='post'
       enctype='multipart/form-data'
       class='create-tour-form'
@@ -35,6 +37,7 @@
         placeholder='Tour Guide'
         class='create-tour-input'
         multiple
+        required
       >
         <option selected value=''></option>
         {{#each guides}}

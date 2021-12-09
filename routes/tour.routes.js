@@ -28,7 +28,7 @@ router.post(
         name,
         description,
         tourGuide,
-        image: req.file.path,
+        image: req.file?.path,
       });
       // console.log(newTour);
       res.redirect('/');
@@ -53,7 +53,7 @@ router.get('/tours/:id', async (req, res) => {
   });
 });
 
-// CRUD - Update - only Admin
+// CRUD - Show Update view - only Admin
 router.get('/tours/:id/edit', isAdmin, async (req, res) => {
   const { id } = req.params;
   const tour = await Tour.findById(id).populate('tourGuide');
@@ -63,7 +63,21 @@ router.get('/tours/:id/edit', isAdmin, async (req, res) => {
 });
 
 // CRUD - Update - POST
-
+router.post('/tours/:id/edit', async (req, res) => {
+  const { id } = req.params;
+  const { name, description, tourGuide } = req.body;
+  console.log(req.body)
+  const tour = await Tour.findByIdAndUpdate(id, {
+    name,
+    description,
+    tourGuide,
+    image: req.file?.path,
+  }, {new: true}
+  );
+  console.log(tour)
+  // res.json(tour)
+  res.redirect('/');
+})
 
 
 // CRUD - Update - DELETE
