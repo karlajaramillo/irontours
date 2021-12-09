@@ -2,8 +2,7 @@
 <div class='create-tour-view'>
   <div class='create-tour-container'>
     <img src='/images/logo.png' alt='Ironhack-logo' class='create-tour-logo' />
-    <p>{{tour._id}}</p>
-     <p>{{tour.name}}</p>
+
     <form
       action='/tours/{{tour._id}}/edit'
       method='post'
@@ -14,32 +13,27 @@
       <input
         type='text'
         name='name'
-        placeholder='Tour Name'
         class='create-tour-input'
         value={{tour.name}}
         required
       />
       {{! </label> }}
       {{! <label>Description: }}
-      <textarea
-        name='description'
-        class='create-tour-input'
-        rows="10"
-        required
-       > 
-        {{tour.description}}
-      </textarea>
+      <textarea name='description' class='create-tour-input' rows='10' required>
+        {{tour.description}}</textarea>
       {{! </label> }}
 
       <select
         name='tourGuide'
         id='tour-guide'
-        placeholder='Tour Guide'
         class='create-tour-input'
         multiple
         required
       >
-        <option selected value=''></option>
+        <option
+          selected
+          value={{tour.tourGuide._id}}
+        >{{tour.tourGuide.name}}</option>
         {{#each guides}}
           {{!All the tour guides from the Model "User" and collection: users }}
           <option

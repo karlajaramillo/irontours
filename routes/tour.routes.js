@@ -43,13 +43,13 @@ router.get('/tours/:id', async (req, res) => {
   const { id } = req.params;
   const tour = await Tour.findById(id).populate('tourGuide');
   const isLoggedIn = req.session.currentUser ? true : false;
-  const isAdmin = req.session.currentUser?.role === "admin" ? true : false;
-  console.log(tour)
-  console.log(tour.tourGuide.name)
+  const isAdmin = req.session.currentUser?.role === 'admin' ? true : false;
+  console.log(tour);
+  console.log(tour.tourGuide.name);
   res.render('tour-views/tour-details', {
     tour,
     isLoggedIn,
-    isAdmin
+    isAdmin,
   });
 });
 
@@ -59,26 +59,32 @@ router.get('/tours/:id/edit', isAdmin, async (req, res) => {
   const tour = await Tour.findById(id).populate('tourGuide');
   const guides = await User.find({ role: 'guide' });
   //const user = req.session.currentUser;
-  res.render('tour-views/tour-update',  { tour, guides});
+  res.render('tour-views/tour-update', { tour, guides });
 });
 
 // CRUD - Update - POST
-router.post('/tours/:id/edit', async (req, res) => {
-  const { id } = req.params;
-  const { name, description, tourGuide } = req.body;
-  console.log(req.body)
-  const tour = await Tour.findByIdAndUpdate(id, {
-    name,
-    description,
-    tourGuide,
-    image: req.file?.path,
-  }, {new: true}
-  );
-  console.log(tour)
-  // res.json(tour)
-  res.redirect('/');
-})
-
+router.post(
+  '/tours/:id/edit',
+  fileUploader.single('tour-cover-image'),
+  async (req, res) => {
+    const { id } = req.params;
+    const { name, description, tourGuide } = req.body;
+    console.log(req.body);
+    const tour = await Tour.findByIdAndUpdate(
+      id,
+      {
+        name,
+        description,
+        tourGuide,
+        image: req.file?.path,
+      },
+      { new: true }
+    );
+    console.log(tour);
+    // res.json(tour)
+    res.redirect('/');
+  }
+);
 
 // CRUD - Update - DELETE
 
