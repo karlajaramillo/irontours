@@ -4,9 +4,10 @@ const User = require('../models/user.model');
 async function getHome(req, res) {
   const allTours = await Tour.find().populate('tourGuide');
   const isLoggedIn = req.session.currentUser ? true : false;
+  const userImage = req.session?.currentUser?.image;
 
   // console.log('getHome');
-  res.render('index', { allTours, isLoggedIn });
+  res.render('index', { allTours, isLoggedIn, userImage });
 }
 
 async function getProfile(req, res) {
@@ -15,8 +16,9 @@ async function getProfile(req, res) {
     'bookedTours'
   );
   const isLoggedIn = req.session.currentUser ? true : false;
+  const userImage = req.session?.currentUser?.image;
   // console.log(user);
-  res.render('profile', { user, isLoggedIn });
+  res.render('profile', { user, isLoggedIn, userImage });
 }
 
 module.exports = { getHome, getProfile };

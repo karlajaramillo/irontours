@@ -13,9 +13,17 @@ router.post(
       const update = req.file?.path
         ? { name, email, image: req.file.path }
         : { name, email };
-      const newUser = await User.findByIdAndUpdate(id, update, { new: true });
+      const { password: unUsed, ...newUser } = await User.findByIdAndUpdate(
+        id,
+        update,
+        { new: true }
+      ).lean();
+      req.session.currentUser = newUser;
+      const user = newUser;
+      const isLoggedIn = req.session.currentUser ? true : false;
+      const userImage = req.session?.currentUser?.image;
       //   console.log(newUser);
-      res.redirect('/profile');
+      res.render('profile', { user, isLoggedIn, userImage });
     } catch (err) {
       console.log(err);
     }
@@ -27,13 +35,17 @@ router.get('/tours/:id/book', async (req, res) => {
   const userId = req.session.currentUser._id;
   const { id } = req.params;
 
-  const bookedTour = await User.findByIdAndUpdate(userId,  {
-    $push: { bookedTours: id  }
-  }, { new: true });
+  const bookedTour = await User.findByIdAndUpdate(
+    userId,
+    {
+      $push: { bookedTours: id },
+    },
+    { new: true }
+  );
 
-  console.log(bookedTour)
+  console.log(bookedTour);
 
-  res.redirect('/profile')
-})
+  res.redirect('/profile');
+});
 
 module.exports = router;
