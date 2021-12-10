@@ -69,11 +69,15 @@
     <div class='profile-bookings'>
       <h2>Your bookings</h2>
       {{#each user.bookedTours}}
-        {{!-- <h4>Name: {{user.name}}</h4> --}}
-        <h4>Name: {{this.name}}</h4>
-        <p>Description: {{this.description}}</p>
-        <img src='{{this.image}}' alt='' />
+        <a href='/tours/{{this._id}}' class='profile-bookings-link'>
+    <div class="profile-booked-tour-card {{this.name}}-color">
+        <h4 class="profile-booked-tour-heading">{{this.name}}</h4>
+        {{!-- <p>Description: {{this.description}}</p> --}}
+        <img src='{{this.image}}' alt='{{this.name}}' class="profile-booked-tour-image"/>
+        
         {{!-- <p>Tour guide: {{this.tourGuide.name}}</p> --}}
+    </div>
+        </a>
       {{/each}}
     </div>
   </main>
