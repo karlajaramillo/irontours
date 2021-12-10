@@ -129,6 +129,12 @@
     margin-left: 2%;
     margin-bottom: 4%;
   }
+  .main-wrapper-img {
+    margin-bottom: 40px;
+  }
+  .tour-cards {
+    margin-top: 20px;
+  }
 }
 
 @media all and (min-width: 1000px) {
