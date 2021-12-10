@@ -110,3 +110,100 @@ label {
   color: rgb(31, 26, 26);
   padding: 2px 3px;
 }
+
+.profile-bookings-link {
+  display: block;
+  width: 98%;
+  height: 150px;
+}
+
+.profile-booked-tour-card {
+  width: 98%;
+  height: 150px;
+  position: relative;
+  color: rgb(243, 235, 235);
+  transition: all 0.2s ease-in-out;
+}
+
+.profile-booked-tour-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  /* color: rgb(44, 42, 42); */
+  font-size: 30px;
+  text-shadow: -1px -1px 2px rgb(63, 60, 60);
+}
+
+.profile-booked-tour-image {
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* height: 100%; */
+}
+
+.profile-booked-tour-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(120deg, #f1f1ec, #e6eef0);
+  opacity: 0.3;
+  z-index: 998;
+}
+
+.Cadiz-color::after {
+  background-image: linear-gradient(120deg, #e57ee9, #7dd5f0);
+}
+
+.Oporto-color::after {
+  background-image: linear-gradient(120deg, #819de9, #f88ccb);
+}
+
+.Budapest-color::after {
+  background-image: linear-gradient(120deg, #e7c8a0, #ecf5cd);
+}
+
+.Berlin-color::after {
+  background-image: linear-gradient(120deg, #a3d2f1, #94d8ec);
+}
+
+.Barcelona-color::after {
+  background-image: linear-gradient(120deg, #ecb886, #c2c06b);
+}
+
+.Paris-color::after {
+  background-image: linear-gradient(120deg, #e844ee, #33d0ff);
+}
+
+.Leipzig-color::after {
+  background-image: linear-gradient(120deg, #56c75c, #33d0ff);
+}
+
+.Philadelphia-color::after {
+  background-image: linear-gradient(120deg, #ee4444, #e06dc7);
+}
+
+.Mieras-color::after {
+  background-image: linear-gradient(120deg, #5a9dca, #352864);
+}
+
+.Aarhus-color::after {
+  background-image: linear-gradient(120deg, #e844ee, #33d0ff);
+}
+
+.profile-booked-tour-card:hover {
+  color: white;
+  transform: scale(1.01);
+}
+.profile-booked-tour-card:hover:after {
+  color: white;
+  transform: scale(1.01);
+  background-image: linear-gradient(120deg, #4a454b, #4d5253);
+  color: white;
+}
