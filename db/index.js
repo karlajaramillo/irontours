@@ -10,8 +10,7 @@ async function connectDb() {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log('hello heroku');
-    console.log(`Conected to DB: ${connection.name}`);
+    console.log(`Connected to DB: ${connection.name}`);
   } catch (err) {
     console.error(`Error connecting to DB: ${err.message}`);
   }

@@ -43,8 +43,23 @@ router.get('/tours/:id/book', async (req, res) => {
     { new: true }
   );
 
-  console.log(bookedTour);
+  // console.log(bookedTour);
 
+  res.redirect('/profile');
+});
+
+router.get('/tours/:id/deleteBooking', async (req, res) => {
+  const { id } = req.params;
+  const userId = req.session.currentUser._id;
+
+  const bookedTour = await User.findByIdAndUpdate(
+    userId,
+    {
+      $pull: { bookedTours: id },
+    },
+    { new: true }
+  );
+  console.log(bookedTour);
   res.redirect('/profile');
 });
 

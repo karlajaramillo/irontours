@@ -44,14 +44,21 @@ router.get('/tours/:id', async (req, res) => {
   const tour = await Tour.findById(id).populate('tourGuide');
   const isLoggedIn = req.session.currentUser ? true : false;
   const isAdmin = req.session.currentUser?.role === 'admin' ? true : false;
+  const userImage = isLoggedIn ? req.session.currentUser.image : '';
   const isUser = isLoggedIn && !isAdmin;
-  console.log(tour);
-  console.log(tour.tourGuide.name);
+
+  const { bookedTours } = await User.findById(req.session.currentUser._id);
+  const isBooked = bookedTours.includes(id) ? true : false;
+  console.log(isBooked);
+  // console.log(tour);
+  // console.log(tour.tourGuide.name);
   res.render('tour-views/tour-details', {
     tour,
     isLoggedIn,
     isAdmin,
     isUser,
+    userImage,
+    isBooked,
   });
 });
 
@@ -92,9 +99,6 @@ router.get('/tours/:id/delete', isAdmin, async (req, res) => {
   const { id } = req.params;
   const tour = await Tour.findByIdAndDelete(id);
   res.redirect('/');
-})
-
-
-
+});
 
 module.exports = router;
