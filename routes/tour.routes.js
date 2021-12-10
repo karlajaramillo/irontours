@@ -46,27 +46,19 @@ router.get('/tours/:id', async (req, res) => {
   const isAdmin = req.session.currentUser?.role === 'admin' ? true : false;
   const userImage = isLoggedIn ? req.session.currentUser.image : '';
   const isUser = isLoggedIn && !isAdmin;
-  if (isLoggedIn) {
-    const { bookedTours } = await User.findById(req.session.currentUser._id);
-    const isBooked = bookedTours.includes(id) ? true : false;
-    console.log(isBooked);
-    res.render('tour-views/tour-details', {
-      tour,
-      isLoggedIn,
-      isAdmin,
-      isUser,
-      userImage,
-      isBooked,
-    });
-  } else {
-    res.render('tour-views/tour-details', {
-      tour,
-      isLoggedIn,
-      isAdmin,
-      isUser,
-      userImage,
-    });
-  }
+  const { bookedTours } = isLoggedIn
+    ? await User.findById(req.session.currentUser._id)
+    : {};
+  const isBooked = bookedTours?.includes(id) ? true : false;
+  console.log(isBooked);
+  res.render('tour-views/tour-details', {
+    tour,
+    isLoggedIn,
+    isAdmin,
+    isUser,
+    userImage,
+    isBooked,
+  });
 });
 
 // CRUD - Show Update view - only Admin
