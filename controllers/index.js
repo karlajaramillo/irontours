@@ -12,13 +12,14 @@ async function getHome(req, res) {
 
 async function getProfile(req, res) {
   // console.log('session', req.session);
+  const { err } = req.query;
   const user = await User.findById(req.session.currentUser._id).populate(
     'bookedTours'
   );
   const isLoggedIn = req.session.currentUser ? true : false;
   const userImage = req.session?.currentUser?.image;
   // console.log(user);
-  res.render('profile', { user, isLoggedIn, userImage });
+  res.render('profile', { user, isLoggedIn, userImage, err });
 }
 
 module.exports = { getHome, getProfile };
