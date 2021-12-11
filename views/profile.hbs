@@ -13,7 +13,7 @@
       <form
         action='/users/update/{{user._id}}'
         id='username'
-        method='post'
+        method='POST'
         enctype='multipart/form-data'
         class='edit-profile-form'
       >
@@ -38,7 +38,6 @@
             class='edit-profile-input'
             name='email'
             value={{user.email}}
-            required
           />
         </div>
         <div class='profile-form-group profile-image'>
@@ -64,7 +63,9 @@
       {{#ifEquals user.role "admin"}}
         <a href="/tours/create">Create a Tour</a>
       {{/ifEquals}}
-      
+    {{#if err}}
+      <p class='signup-error'>{{err}}</p>
+    {{/if}}
     </div>
     <div class='profile-bookings'>
       <h2>Your bookings</h2>

@@ -45,5 +45,8 @@
       {{! </label> }}
       <button type='submit' class='create-tour-btn'>Create</button>
     </form>
+    {{#if err}}
+      <p class='signup-error'>{{err}}</p>
+    {{/if}}
   </div>
 </div>

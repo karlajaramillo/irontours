@@ -14,12 +14,12 @@
         type='text'
         name='name'
         class='create-tour-input'
-        value={{tour.name}}
-        required
+        value='{{tour.name}}'
+        
       />
       {{! </label> }}
       {{! <label>Description: }}
-      <textarea name='description' class='create-tour-input' rows='10' required>
+      <textarea name='description' class='create-tour-input' rows='10' >
         {{tour.description}}</textarea>
       {{! </label> }}
 
@@ -28,7 +28,6 @@
         id='tour-guide'
         class='create-tour-input'
         multiple
-        required
       >
         <option
           selected
@@ -47,5 +46,8 @@
       {{! </label> }}
       <button type='submit' class='create-tour-btn'>Update</button>
     </form>
+    {{#if err}}
+      <p class='signup-error'>{{err}}</p>
+    {{/if}}
   </div>
 </div>
