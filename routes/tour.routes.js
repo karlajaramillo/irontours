@@ -79,7 +79,7 @@ router.get('/tours/:id', async (req, res) => {
       isUser,
       userImage,
       isBooked,
-    });
+    }); 
   } catch(err) {
     console.error('error', err);
     next(err);

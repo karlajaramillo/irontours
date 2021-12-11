@@ -1,0 +1,124 @@
+
+.wrapper-tour-details {
+  color: #4a4a4a;
+  font-size: 1rem;
+  padding-top: 64px;
+  font-weight: 100;
+  font-family: 'Rubik', sans-serif;
+  max-width: 1200px;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.wrapper-tour-details ul {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  border-top: 1px solid rgba(170, 170, 170, 0.25);
+  background-color: #f8fafc;
+}
+.wrapper-tour-details li {
+  padding-right: 10px;
+}
+
+.tour-guide-details span {
+  color: #4b88c9;
+  font-size: .8rem;
+}
+
+.tour-guide-details {
+  font-size: .8rem;
+}
+
+.wrapper-tour-image {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+.wrapper-tour-image .name-city-tour-details {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  z-index: 1000;
+}
+
+.name-city-tour-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 20px 0px 20px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.wrapper-tour-image h2 {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Lato';
+}
+
+.wrapper-tour-image img {
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper-tour-image::after {
+  background-image: linear-gradient(120deg, #41597c, #41597c);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 900;
+  opacity: 0.65;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.loginToBook-tour-btn,
+.book-tour-btn {
+  padding: 8px;
+  border: 2px solid #ffb835;
+  text-transform: uppercase;
+  color: #ffb835;
+  font-weight: 600;
+  text-shadow: -1px -1px 2px rgb(63, 60, 60);
+}
+
+.delete-tour-btn {
+  padding: 8px;
+  border: 2px solid #ff5454;
+  text-transform: uppercase;
+  color: #ff5454;
+  font-weight: 600;
+  text-shadow: -1px -1px 2px rgb(63, 60, 60);
+}
+
+.description-tour-details {
+  padding: 20px 35px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+
+@media all and (min-width: 650px) {
+  .wrapper-tour-image::after {
+    height: 80px;
+  }
+  .wrapper-tour-image {
+    height: 500px;
+  }
+}
+
+@media (min-width: 800px) and (orientation: landscape) { 
+  .wrapper-tour-image {
+    height: 80vh;
+  }
+}

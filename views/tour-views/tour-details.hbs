@@ -1,26 +1,35 @@
-{{! views/tous-details.hbs }}
-<a href='/'>Go back Home</a>
+{{! views/tour-details.hbs }}
+<div class="wrapper-tour-details">
+  <div class="wrapper-tour-image">
+    <img src='{{tour.image}}' alt='' />
+    <div class="name-city-tour-details">
+      <div><h2>{{tour.name}}</h2></div>
+      {{#if isLoggedIn}}
+        {{#if isBooked}}
+          <div><a class="delete-tour-btn" href='/tours/{{tour._id}}/deleteBooking'>Delete Booking</a></div>
+        {{else}}
+          <div><a class="book-tour-btn" href='/tours/{{tour._id}}/book'>+ Book</a></div>
+        {{/if}}
+        {{else}}
+          <div><a class="loginToBook-tour-btn" href='/login'>+ Log In to Book</a></div>
+        {{/if}}
+    </div>
+  </div>
+  
+  <div class="description-tour-details">
+    <p>{{tour.description}}</p>
+  </div>
+  <ul>
+    <li>
+      {{!-- <img src={{userImage}} alt='profile image' class='main-profile-image'/> --}}
+      <img src={{tour.tourGuide.image}} alt='profile image' class='main-profile-image'/>
+    </li>
+    <li class="tour-guide-details">{{tour.tourGuide.name}}<span> • Tour guide</span></li>
+  </ul>
 
-<h2>Details for the Tour</h2>
-
-<div>
-  <h4>Name: {{tour.name}}</h4>
-  <p>Description: {{tour.description}}</p>
-  <img src='{{tour.image}}' alt='' />
-  <p>Tour guide: {{tour.tourGuide.name}}</p>
   {{#if isAdmin}}
     <a href='/tours/{{tour._id}}/edit'>Update Tour</a>
     <a href='/tours/{{tour._id}}/delete'>Delete</a>
-  {{/if}}
-
-  {{#if isLoggedIn}}
-    {{#if isBooked}}
-      <a href='/tours/{{tour._id}}/deleteBooking'>Delete Booking</a>
-    {{else}}
-      <a href='/tours/{{tour._id}}/book'>Book</a>
-    {{/if}}
-  {{else}}
-    <a href='/login'>Log In to Book the tour</a>
   {{/if}}
 
 </div>
