@@ -18,11 +18,15 @@
     <link rel='stylesheet' href='/stylesheets/mainStyle.css' />
     <link rel='stylesheet' href='/stylesheets/profileStyle.css' />
     <link rel='stylesheet' href='/stylesheets/tourDetailsStyle.css' />
+    <link rel='stylesheet' href='/stylesheets/mapStyle.css' />
     <title>IronTours</title>
     <script
       src='https://use.fontawesome.com/releases/v5.15.4/js/all.js'
       data-auto-replace-svg='nest'
     ></script>
+    {{!-- mapbox --}}
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body>
     <header>
@@ -78,4 +82,5 @@
     {{{body}}}
   </body>
   <script src='/javascripts/script.js'></script>
+  <script src='/javascripts/mapbox.js'></script>
 </html>

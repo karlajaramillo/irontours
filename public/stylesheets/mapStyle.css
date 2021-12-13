@@ -1,0 +1,62 @@
+.map-wrapper {
+    position: relative;
+    height: 30vh;
+  }
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .marker {
+    background-image: url('../images/pin.png');
+    background-size: cover;
+    width: 12px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  #map p {
+    line-height: 1.5;
+    margin-bottom: 5px;
+  
+  }
+  .popup-name {
+    font-size: .6rem;
+    margin-bottom: 0;
+    color: #ffb835;
+  }
+  
+  .popup-tourGuide {
+    color: #ccd1d7;
+    font-size: .4rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+  .popup-msg {
+    color: #fff;
+    font-size: .4rem;
+    margin-bottom: 0;
+  }
+  
+  #map .mapboxgl-popup-content {
+    width: 150px;
+    background: rgb(35 48 68 / 89%);
+  }
+  
+  .popup-img {
+    text-align: center;
+  }
+  .popup-img img{
+    width: 100px;
+    height: auto;
+  }
+  
+  #map .mapboxgl-popup-close-button {
+    color: #fff;
+  }
+  
+  #map .mapboxgl-popup-close-button:focus {
+    outline: 0;
+  }
