@@ -167,7 +167,7 @@ mapboxgl.accessToken =
 
 const map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/light-v10',
+  style: 'mapbox://styles/mapbox/streets-v11',
   //center: [13.4105300,  52.5243700], // starting position
   zoom: 9,
   scrollZoom: false,
@@ -177,26 +177,15 @@ const map = new mapboxgl.Map({
 
 const bounds = new mapboxgl.LngLatBounds();
 
-mapJSON.forEach(function (marker) {
+mapJSON.locations.forEach(function (marker) {
   // console.log('mapbox 185');
   // create the popup
   // const newMarker = marker.mapData || marker;
   const popup = new mapboxgl.Popup({
     offset: 10,
     //closeOnClick: false
-  }).setLngLat(marker.mapData.coordinates).setHTML(`
-         <p class="popup-name">${marker.mapData.description}</p> 
-         <p class="popup-msg">${marker.mapData.message}</p>
-         <div class="tourGuideInfo">
-            <img
-              src=${marker.tourGuide.image}
-              alt='profile image'
-              class='main-profile-image'
-            />
-            <p class="popup-tourGuide">${marker.tourGuide.name}<span> • Tour guide</span></p>
-          </div>
-  
-         <div class="popup-img"><img class="popup-img"src=${marker.image} alt="${marker.mapData.description}"></div>
+  }).setLngLat(marker.coordinates).setHTML(`
+         <p class="popup-name-details">${marker.description}</p> 
          `);
 
   // create the DOM element for the marker
@@ -207,11 +196,11 @@ mapJSON.forEach(function (marker) {
     element: el,
     anchor: 'bottom',
   })
-    .setLngLat(marker.mapData.coordinates)
+    .setLngLat(marker.coordinates)
     .setPopup(popup) // sets a popup on this marker
     .addTo(map);
 
-  bounds.extend(marker.mapData.coordinates);
+  bounds.extend(marker.coordinates);
 });
 
 map.fitBounds(bounds, {

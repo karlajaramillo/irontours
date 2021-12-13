@@ -237,3 +237,39 @@ body {
 .profile-view {
   padding-top: 100px;
 }
+
+
+/*
+  ==============================
+  Main footer
+  ==============================
+*/
+
+.main-footer {
+  background-color: #fdfdfd;
+  padding: 1em 3em;
+}
+  
+.margin-top-footer {
+  margin-top: 5em;
+}
+  
+.footer-nav a {
+  color: #adabab;
+}
+  
+.footer-header {
+  text-transform: uppercase;
+  padding-top: 10px;
+  color: #134c68;
+  font-weight: 400;
+}
+
+.main-footer {
+  font-family: 'Lato';
+  color: #808080;
+  font-size: .8rem;
+}
+.copyright {
+  font-size: .6rem;
+}
