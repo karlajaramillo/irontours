@@ -1,0 +1,362 @@
+[
+  {
+    "startLocation": {
+      "description": "Paris, France",
+      "type": "Point",
+      "coordinates": [2.349014, 48.864716]
+    },
+    "images": ["", "", ""],
+
+    "locations": [
+      {
+        "description": "The Eiffel Tower",
+        "type": "Point",
+        "coordinates": [2.294694, 48.858093]
+      },
+      {
+        "description": "Notre Dame Cathedral",
+        "type": "Point",
+        "coordinates": [2.349902, 48.852966]
+      },
+      {
+        "description": "Musée du Louvre",
+        "type": "Point",
+        "coordinates": [2.338629, 48.860294]
+      },
+      {
+        "description": "Sacre Coeur",
+        "type": "Point",
+        "coordinates": [2.343121, 48.886452]
+      },
+      {
+        "description": "Palace of Versailles",
+        "type": "Point",
+        "coordinates": [2.121782, 48.804722]
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Oporto, Portugal",
+      "type": "Point",
+      "coordinates": [-95.380264, 29.753159]
+    },
+    "images": ["", "", ""],
+
+    "locations": [
+      {
+        "description": "Catedral de la Sé de Oporto",
+        "type": "Point",
+        "coordinates": [-8.611116501950283, 41.143063148047524]
+      },
+      {
+        "description": "Mercado do Bolhão",
+        "type": "Point",
+        "coordinates": [-8.607145673282448, 41.149549927266904]
+      },
+      {
+        "description": "Monasterio de la Sierra del Pilar",
+        "type": "Point",
+        "coordinates": [-8.60645561802055, 41.13865085673863]
+      },
+      {
+        "description": "Casa da Musica",
+        "type": "Point",
+        "coordinates": [-8.63004154309643, 41.15911522943159]
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Cadiz, Spain",
+      "type": "Point",
+      "coordinates": [-87.835670, 36.865379]
+    },
+    "images": ["", "", ""],
+
+    "locations": [
+      {
+        "description": "Museo de Cádiz",
+        "type": "Point",
+        "coordinates": [-6.292065451131038, 36.53641356184588 ]
+      },
+      {
+        "description": "Parque Genovés",
+        "type": "Point",
+        "coordinates": [-6.304081747534746, 36.535896336803795]
+      },
+      {
+        "description": "Castillo de Santa Catalina",
+        "type": "Point",
+        "coordinates": [-6.30650646456768, 36.53318946863733]
+      },
+      {
+        "description": "La Caleta",
+        "type": "Point",
+        "coordinates": [ -6.305798361315358, 36.53003420966878]
+      },
+      {
+        "description": "Castillo de Luna",
+        "type": "Point",
+        "coordinates": [ -6.305798361315358, 36.53003420966878]
+      },
+      {
+        "description": "Castillo de Luna",
+        "type": "Point",
+        "coordinates": [-6.354187694026539, 36.61808335149095]
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Berlin, Germany",
+      "type": "Point",
+      "coordinates": [13.4105300,  52.5243700]
+    },
+    "images": ["", "", ""],
+
+    "locations": [
+      {
+        "description": "Alexanderplatz",
+        "type": "Point",
+        "coordinates": [13.417323205836489, 52.52418810487791  ]
+      },
+      {
+        "description": "Gendarmenmarkt",
+        "type": "Point",
+        "coordinates": [13.393036075943602, 52.51760482160975 ]
+      },
+      {
+        "description": "Mauerpark",
+        "type": "Point",
+        "coordinates": [13.417755314206167, 52.5453821229811]
+      },
+      {
+        "description": "Schloss Charlottenburg",
+        "type": "Point",
+        "coordinates": [13.299652286917444, 52.51614237155977]
+      },
+      {
+        "description": "Berlin Wall Memorial",
+        "type": "Point",
+        "coordinates": [13.39028949391677, 52.538282830463196]
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Barcelona, Spain",
+      "type": "Point",
+      "coordinates": [2.162152849391072, 41.49141063473779]
+    },
+    "images": ["", "", ""],
+
+    "locations": [
+      {
+        "description": "Plaza de España",
+        "type": "Point",
+        "coordinates": [2.1498272250996413, 41.3769863761877 ]
+      },
+      {
+        "description": "Plaza de Cataluña",
+        "type": "Point",
+        "coordinates": [2.1693966220575036, 41.38973738373506]
+      },
+      {
+        "description": "Arco de Triunfo de Barcelona",
+        "type": "Point",
+        "coordinates": [2.1802112888113925, 41.39733527989491]
+      },
+      {
+        "description": "Rambla de Mar",
+        "type": "Point",
+        "coordinates": [2.1809837650080053, 41.37589147578127 ]
+      },
+      {
+        "description": "Plaza de Gaudí",
+        "type": "Point",
+        "coordinates": [2.1789238284835957, 41.40512542094733 ]
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Leipzig, Germany",
+      "type": "Point",
+      "coordinates": [12.37129,  51.33962]
+    },
+    "images": ["", "", ""],
+
+    "locations": [
+      {
+        "description": "Grassi Museum of Applied Arts",
+        "type": "Point",
+        "coordinates": [12.408047114025146, 51.34470137789239 ]
+      },
+      {
+        "description": "Monument to the Battle of the Nations",
+        "type": "Point",
+        "coordinates": [12.43688622533147, 51.31681427838218 ]
+      },
+      {
+        "description": "Gohliser Schlösschen",
+        "type": "Point",
+        "coordinates": [12.372537754829715, 51.35874753117509 ]
+      },
+      {
+        "description": "Marktplatz Leipzig",
+        "type": "Point",
+        "coordinates": [12.37039198761513, 51.34175435380264 ]
+      },
+      {
+        "description": "Forum of Contemporary History Leipzig",
+        "type": "Point",
+        "coordinates": [12.373653553770557, 51.340494356325515 ]
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Aarhus, Denmark",
+      "type": "Point",
+      "coordinates": [10.21076,  56.15674]
+    },
+    "images": ["", "", ""],
+
+    "locations": [
+      {
+        "description": "ARoS",
+        "type": "Point",
+        "coordinates": [10.199339149858382, 56.15612506843413 ]
+      },
+      {
+        "description": "Museerne i Uniparken",
+        "type": "Point",
+        "coordinates": [ 10.198909996416324, 56.16644887806143]
+      },
+      {
+        "description": "Steno Museum",
+        "type": "Point",
+        "coordinates": [10.202772377394849, 56.16606656422033 ]
+      },
+      {
+        "description": "Catedral de San Clemente de Aarhus",
+        "type": "Point",
+        "coordinates": [ 10.21041130866216, 56.158706280871215]
+      },
+      {
+        "description": "Havnefronten",
+        "type": "Point",
+        "coordinates": [  10.215046165833401, 56.15829999033973]
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Philadelphia, USA",
+      "type": "Point",
+      "coordinates": [-75.07961245713203, 39.99374438675624 ],
+    },
+    "images": ["", "", ""],
+
+    "locations": [
+      {
+        "description": "Rocky steps",
+        "type": "Point",
+        "coordinates": [ -75.17514457199033, 39.96663052904943 ]
+      },
+      {
+        "description": "The Cliffs",
+        "type": "Point",
+        "coordinates": [ -75.18836249800573, 39.98215337523472]
+      },
+      {
+        "description": "National Liberty Museum",
+        "type": "Point",
+        "coordinates": [-75.14450301622414, 39.94998559594681 ]
+      },
+      {
+        "description": "Philadelphia's Magic Gardens",
+        "type": "Point",
+        "coordinates": [-75.15437354538916, 39.94380028034599 ]
+      },
+      {
+        "description": "Independence National Historical Park",
+        "type": "Point",
+        "coordinates": [-75.14884238110561 , 39.95092285604814 ]
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Mieres, Spain",
+      "type": "Point",
+      "coordinates": [-5.778204868283153, 43.251327057586984],
+    },
+    "images": ["", "", ""],
+
+    "locations": [
+      {
+        "description": "Plaza de Requejo",
+        "type": "Point",
+        "coordinates": [ -5.771756121698207, 43.252637492751965 ]
+      },
+      {
+        "description": "Iglesia San Juan",
+        "type": "Point",
+        "coordinates": [ -5.77184468787611, 43.25282914029047 ]
+      },
+      {
+        "description": "Casa de Cultura Teodoro Cuesta",
+        "type": "Point",
+        "coordinates": [-5.770771804271193, 43.250641122322016]
+      },
+      {
+        "description": "Ayuntamiento de Mieres",
+        "type": "Point",
+        "coordinates": [-5.7687976984374965 , 43.24932827378298 ]
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Budapest, Hungary",
+      "type": "Point",
+      "coordinates": [19.091819287085524, 47.55506932957828 ],
+    },
+    "images": ["", "", ""],
+
+    "locations": [
+      {
+        "description": "Citadella",
+        "type": "Point",
+        "coordinates": [19.03900702762605, 47.49018837055659 ]
+      },
+      {
+        "description": "Castillo de Vajdahunyad",
+        "type": "Point",
+        "coordinates": [ 19.09102042481534, 47.51697624531959 ]
+      },
+      {
+        "description": "Országház",
+        "type": "Point",
+        "coordinates": [ 19.046098156769894, 47.50810663378128]
+      },
+      {
+        "description": "Budavári Palota",
+        "type": "Point",
+        "coordinates": [19.042664929235816, 47.49726373676762 ]
+      },
+      {
+        "description": "Nagy Vásárcsarnok",
+        "type": "Point",
+        "coordinates": [19.060946865869578 , 47.487694614901585 ]
+      },
+      {
+        "description": "Hősök tere",
+        "type": "Point",
+        "coordinates": [19.070559902969933, 47.51703439660313  ]
+      }
+    ]
+  }
+]
