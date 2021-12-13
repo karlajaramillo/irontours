@@ -1,6 +1,15 @@
 const { Schema, model } = require('mongoose');
 
 const TourSchema = new Schema({
+  mapData: {
+    type: {
+      type: String,
+      default: 'Point',
+    },
+    coordinates: [Number],
+    description: String,
+    message: String,
+  },
   name: {
     type: String,
     required: [true, 'Please provide a tour name'],
@@ -21,6 +30,16 @@ const TourSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User',
   },
+  locations: [
+    {
+      type: {
+        type: String,
+        default: 'Point',
+      },
+      coordinates: [Number],
+      description: String,
+    },
+  ],
 });
 
 module.exports = model('Tour', TourSchema);

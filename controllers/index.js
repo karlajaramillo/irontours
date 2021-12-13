@@ -5,9 +5,9 @@ async function getHome(req, res) {
   const allTours = await Tour.find().populate('tourGuide');
   const isLoggedIn = req.session.currentUser ? true : false;
   const userImage = req.session?.currentUser?.image;
-
-  // console.log('getHome');
-  res.render('index', { allTours, isLoggedIn, userImage });
+  const allToursJSON = JSON.stringify(allTours);
+  // console.log(allToursJSON);
+  res.render('index', { allTours, isLoggedIn, userImage, allToursJSON });
 }
 
 async function getProfile(req, res) {

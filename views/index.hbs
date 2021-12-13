@@ -1,22 +1,24 @@
-
-  {{!-- <a href='/login'>login</a>
-  <a href='/signup'>signup</a> --}}
-<div class="main-flex">
-  <div class="main-wrapper-img">
+{{! <a href='/login'>login</a>
+  <a href='/signup'>signup</a> }}
+<div class='main-flex'>
+  <div class='main-wrapper-img'>
     <h1>Ironhackers around the world</h1>
-    <i class="fas fa-angle-double-down"></i>
-  </div>  
-  <div class="tour-cards">
+    <i class='fas fa-angle-double-down'></i>
+  </div>
+  <div class='tour-cards'>
     {{#each allTours}}
-      <div class="tour-card-each">
+      <div class='tour-card-each'>
         {{!-- <p>{{description}}</p>
         <p>{{tourGuide.name}}</p> --}}
-        <div class="tour-img-cover">
-          <div class="tour-wrapper-img" style="background-image: url('{{image}}');">
+        <div class='tour-img-cover'>
+          <div
+            class='tour-wrapper-img'
+            style="background-image: url('{{image}}');"
+          >
             {{!-- <div class="tour-wrapper-img" style="background-image: linear-gradient(to bottom right, rgb(235 207 9 / 65%), rgb(235 207 9 / 65%)), url('{{image}}');"> --}}
             {{!-- <img src='{{image}}' alt='{{name}}' /> --}}
             <h1>{{name}}</h1>
-            <div class="details-btn">
+            <div class='details-btn'>
               <a href='/tours/{{_id}}'>Discover</a>
             </div>
           </div>
@@ -25,8 +27,6 @@
     {{/each}}
   </div>
 </div>
-<div class='map-wrapper'><div id='map'></div></div>
-
-
-
-
+<div class='map-wrapper' data-locations='{{allToursJSON}}'><div
+    id='map'
+  ></div></div>

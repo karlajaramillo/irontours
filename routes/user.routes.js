@@ -2,7 +2,10 @@ const router = require('express').Router();
 const Tour = require('../models/tour.model');
 const User = require('../models/user.model');
 const fileUploader = require('../config/cloudinary.config');
-const { isValidationError, isMongoError } = require('../controllers/auth.controllers')
+const {
+  isValidationError,
+  isMongoError,
+} = require('../controllers/auth.controllers');
 
 const emailRegex = /^\S+@\S+\.\S+$/;
 
@@ -71,7 +74,7 @@ router.get('/tours/:id/book', async (req, res) => {
     // console.log(bookedTour);
 
     res.redirect('/profile');
-  } catch(err) {
+  } catch (err) {
     console.error('error', err);
     next(err);
   }
@@ -91,7 +94,7 @@ router.get('/tours/:id/deleteBooking', async (req, res) => {
     );
     console.log(bookedTour);
     res.redirect('/profile');
-  } catch(err) {
+  } catch (err) {
     console.error('error', err);
     next(err);
   }

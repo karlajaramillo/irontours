@@ -1,0 +1,437 @@
+[
+  {
+    "_id": {
+      "$oid": "61b058495be40b7e9de6a88f"
+    },
+    "name": "Paris",
+    "description": "Paris offers something for everyone. It boasts rich culture and art, both in museums and galleries as well as on streets and in theatres. Get captivated by rich palaces and romantic gardens. \r\n\r\nExplore the wide avenues and narrow cobbled streets where a new gem waits for travellers around every corner. While sightseeing, don’t forget to enjoy life or, as the French would say: Joie de vivre. Paris is not only an open-air museum, it also houses numerous museums and beautiful monuments worth visiting. \r\n\r\nYou have to discover the the Eiffel Tower, that was built in 1889 for the Exposition Universelle, the Eiffel Tower (Tour Eiffel) has become the main symbol of Paris. It is also the most-visted attraction in the world. The centre of Paris contains the most visited monuments in the city, including the Notre Dame Cathedral (now closed for restoration) and the Louvre as well as the Sainte-Chapelle; Les Invalides, where the tomb of Napoleon is located, and the Eiffel Tower are located on the Left Bank south-west of the centre. The Panthéon and the Catacombs of Paris are also located on the Left Bank of the Seine. The banks of the Seine from the Pont de Sully to the Pont d'Iéna have been listed as a UNESCO World Heritage Site since 1991. Other landmarks are laid out east to west along the historical axis of Paris, which runs from the Louvre through the Tuileries Garden, the Luxor Column in the Place de la Concorde, and the Arc de Triomphe, to the Grande Arche of La Défense. \r\n\r\nSeveral other much-visited landmarks are located in the suburbs of the city; the Basilica of St Denis, in Seine-Saint-Denis, is the birthplace of the Gothic style of architecture and the royal necropolis of French kings and queens.The Paris region hosts three other UNESCO Heritage sites: the Palace of Versailles in the west,the Palace of Fontainebleau in the south,and the medieval fairs site of Provins in the east. In the Paris region, Disneyland Paris, in Marne-la-Vallée, 32 kilometres (20 miles) east of the centre of Paris, received 9.66 million visitors in 2017.“",
+    "image": "https://res.cloudinary.com/dijmqauxw/image/upload/v1638946888/tour-project/mnuiyfrtzi1mb7reocir.jpg",
+    "tourGuide": {
+      "$oid": "61b05e7b5be40b7e9de6a8b6"
+    },
+    "mapData": {
+      "description": "Paris, France",
+      "type": "Point",
+      "coordinates": [2.349014, 48.864716],
+      "message": "You will discover everything you need in this charming with our breathtaking Tour guide, prepare for the best pizza too!"
+    },
+    "locations": [
+      {
+        "description": "The Eiffel Tower",
+        "type": "Point",
+        "coordinates": [2.294694, 48.858093]
+      },
+      {
+        "description": "Notre Dame Cathedral",
+        "type": "Point",
+        "coordinates": [2.349902, 48.852966]
+      },
+      {
+        "description": "Musée du Louvre",
+        "type": "Point",
+        "coordinates": [2.338629, 48.860294]
+      },
+      {
+        "description": "Sacre Coeur",
+        "type": "Point",
+        "coordinates": [2.343121, 48.886452]
+      },
+      {
+        "description": "Palace of Versailles",
+        "type": "Point",
+        "coordinates": [2.121782, 48.804722]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "61b05ac05be40b7e9de6a894"
+    },
+    "name": "Oporto",
+    "description": " Porto is the second-largest city in Portugal after Lisbon, with 1.7 million inhabitants.\r\nPorto was chosen as “The City to Visit This Year” by Forbes in 2017 and is a definite must-see city in Europe, even if it is just for a weekend break.\r\nLocated in the north of Portugal by the outlet of the Douro River, it has a unique atmosphere with elegant neighbourhoods and large villas sitting on narrow cobbled streets. This soulful city was classified as a World Heritage Site by UNESCO in 1996.\r\nPorto is just the perfect size to explore by foot. \r\nYou’ll enjoy wandering down its alleyways full of history and nostalgia. An evening walk along the Douro River, visiting the vibrant Mercado do Bolhão or sampling its renowned Port wine are just some of the many things you can do in this fascinating city.\r\n\r\nOn a brief visit to Porto, there are some places that cannot be missed. In the words of many visitors, this city has something mystical that is difficult to describe and which varies according to the place, time of day and light. Whatever it is, it certainly has to do with its people, known to be generous and easy-going, as well as the River Douro and its heritage on both banks, with its bridges and monuments, the tiles, the flowering balconies and the shopping streets. \r\n\r\nThe historic centre of Porto and the River Douro on the Gaia side, where the Port Wine lodges are located, are classified as World Heritage. You can’t miss the top attractions in Porto. The Porto Cathedral, built on the highest point of the city, Porto Cathedral (Sé do Porto in Portuguese) is the most important religious edifice of Porto, Portugal. Cellars and vineyards, which is one of its most popular attractions is to visit some of its wineries and vineyards. Discover which are the most famous wineries. The Tram Museum in Porto (Museu do Carro Eléctrico) features interesting photos, original uniforms, restored machinery and various historic trams. The Ribeira, located on the riverbank of the Douro, Ribeira is one of the most beautiful and liveliest districts in Porto’s historic centre. Discover the things to do. Mercado do Bolhão, Inaugurated in 1914, the Mercado do Bolhão (Bolhão Market) is located in the city center and holds the essence of the city. A must-see. São Bento Railway Station. The São Bento Railway Station was opened to the public in 1916 on the site of a former Benedictine monastery. It is one of the most beautiful stations. Palácio da Bolsa, which is one of the most beautiful buildings in Porto. It is worth doing one of its guided tours to visit this impressive edifice. Livraria Lello & Irmão, considered the most beautiful library in Europe and one of the most beautiful in the world, Livraria Lello & Irmão is a definite must-see.",
+    "image": "https://res.cloudinary.com/dijmqauxw/image/upload/v1638947518/tour-project/ppuwturojzolnfujolrd.jpg",
+    "tourGuide": {
+      "$oid": "61b05daa5be40b7e9de6a8ad"
+    },
+    "mapData": {
+      "description": "Oporto, Portugal",
+      "type": "Point",
+      "coordinates": [-8.632848877366976, 41.20141934195041],
+      "message": "You will love to meet this city with our kind and friendly Tour guide! It will be an unforgettable experience!"
+    },
+    "locations": [
+      {
+        "description": "Catedral de la Sé de Oporto",
+        "type": "Point",
+        "coordinates": [-8.611116501950283, 41.143063148047524]
+      },
+      {
+        "description": "Mercado do Bolhão",
+        "type": "Point",
+        "coordinates": [-8.607145673282448, 41.149549927266904]
+      },
+      {
+        "description": "Monasterio de la Sierra del Pilar",
+        "type": "Point",
+        "coordinates": [-8.60645561802055, 41.13865085673863]
+      },
+      {
+        "description": "Casa da Musica",
+        "type": "Point",
+        "coordinates": [-8.63004154309643, 41.15911522943159]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "61b05c225be40b7e9de6a899"
+    },
+    "name": "Cadiz",
+    "description": "Founded 3,000 years ago by the Phoenicians, Cádiz is the oldest city in Western Europe.\r\nThe different peoples who settled here left an important cultural imprint, whose influence still remains in the character of the city's people. This peninsula, right on the Andalusian Atlantic coast, has been able to preserve an important historical legacy - the result of its commercial importance - together with excellent beaches and an exquisite regional cuisine. \r\n\r\nThe Costa de la Luz, divided between the provinces of Huelva and Cádiz, also offers a multitude of destinations combining culture and leisure. And, for nature lovers, there is nothing better than touring the Doñana National Park, declared a World Heritage Site by UNESCO. \r\nIn Cadiz , the sea, its people, its bay, its history and its joie de vivre .\r\n\r\nThe province of Cadiz is very diverse and contains numerous places which are well worth a visit, from the countryside around Jerez de la Frontera to the villages in Campo de Gibraltar, or you can take a tour of the white villages and stop to relax somewhere along the coast between Tarifa and Sanlúcar de Barrameda.\r\n\r\nAnd all this without forgetting the capital of the region, which holds within its walls the culture and the traditions which set the city –and its people– apart.\r\nDon’t think twice, Cadiz is the perfect destination for your holidays.\r\nLandscape\r\n\r\nIts 260 kilometres of Atlantic coastline feature long beaches with fine sand, many of them undeveloped and not excessively exploited for tourism. The whole coast is part of the Costa de la Luz.\r\n\r\nYou will find everything from first-rate urban beaches like La Victoria in the city of Cadiz or La Barrosa in Chiclana, through to virgin beaches such as the Levante in El Puerto; Los Caños de Meca and Zahora in the Barbate area, Bolonia in Tarifa and El Palmar in Vejer.\r\n\r\nPlaces worth visiting inland include the vineyards of Jerez or the White Villages Route and the Bullfighting Route.",
+    "image": "https://res.cloudinary.com/dijmqauxw/image/upload/v1638947873/tour-project/b6zzwwkqubyofo7bgliw.jpg",
+    "tourGuide": {
+      "$oid": "61b04d6e5be40b7e9de6a880"
+    },
+    "mapData": {
+      "description": "Cadiz, Spain",
+      "type": "Point",
+      "coordinates": [-6.28830420868073, 36.529762436178004],
+      "message": "'You will want to live here!!! Our colombian Tour guide will show your the best beaches at the south of Spain!"
+    },
+    "locations": [
+      {
+        "description": "Museo de Cádiz",
+        "type": "Point",
+        "coordinates": [-6.292065451131038, 36.53641356184588]
+      },
+      {
+        "description": "Parque Genovés",
+        "type": "Point",
+        "coordinates": [-6.304081747534746, 36.535896336803795]
+      },
+      {
+        "description": "Castillo de Santa Catalina",
+        "type": "Point",
+        "coordinates": [-6.30650646456768, 36.53318946863733]
+      },
+      {
+        "description": "La Caleta",
+        "type": "Point",
+        "coordinates": [-6.305798361315358, 36.53003420966878]
+      },
+      {
+        "description": "Castillo de Luna",
+        "type": "Point",
+        "coordinates": [-6.305798361315358, 36.53003420966878]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "61b05d795be40b7e9de6a8a7"
+    },
+    "name": "Berlin",
+    "description": "Steeped in its evocative history and the rapid changes that have taken place over the past two decades, Berlin today exerts its own particular fascination. More than twenty years after the fall of the Berlin Wall and the reunification of Germany, the capital projects itself as a young, dynamic and cosmopolitan city at the heart of Europe which is constantly re-inventing itself. Variety is guaranteed, but you can also travel to the German capital for rest and relaxation. In Berlin a fast paced metropolis and relaxing rest areas in nature are not far apart. Whether in Tiergarten, Tempelhofer Freiheit, Görlitzer Park or Grunewald – every district has its “green oasis”, which improves the quality of living and allows visitors to take a short break.\r\n \r\nCity of unlimited possibilities\r\n \r\nOriginally a symbol of separation, since Reunification the former “Walled City“ of Berlin, lying as it does at the interface between Western and Eastern Europe, has developed into a popular travel destination and is highly indicative of the current trend, not only as tourists from Germany are concerned but also visitors from abroad. Guests are not only interested in the history and culture of the city, but also in the lifestyle of its inhabitants.\r\n \r\nBut exactly what is it that actually makes Berlin so attractive? It is the diversity, the contrasts and the sheer inexhaustible potential of this capital city to consistently fire the enthusiasm of its visitors from all over the world. People are excited by the mixture of history and Zeitgeist, the broad spectrum of art, culture, music, entertainment and shopping facilities. The modern hotel landscape, the diversity of its cuisine and its outstanding cost-effectiveness by comparison to other destinations in Europe also go to make up the special charm that is the metropolis on the Spree. A flourishing creative scene together with Berlin’s hip music and club culture likewise contribute to the unmistakable lifestyle metropolis with a population of around 3.5 million.",
+    "image": "https://res.cloudinary.com/dijmqauxw/image/upload/v1638948217/tour-project/ujcnohtycdco0qvpcke1.jpg",
+    "tourGuide": {
+      "$oid": "61b05c675be40b7e9de6a89f"
+    },
+    "mapData": {
+      "description": "Berlin, Germany",
+      "type": "Point",
+      "coordinates": [13.41053, 52.52437],
+      "message": "You will be amazed with our witty and passionate Tour guide, prepare for the best experience!"
+    },
+    "locations": [
+      {
+        "description": "Alexanderplatz",
+        "type": "Point",
+        "coordinates": [13.417323205836489, 52.52418810487791]
+      },
+      {
+        "description": "Gendarmenmarkt",
+        "type": "Point",
+        "coordinates": [13.393036075943602, 52.51760482160975]
+      },
+      {
+        "description": "Mauerpark",
+        "type": "Point",
+        "coordinates": [13.417755314206167, 52.5453821229811]
+      },
+      {
+        "description": "Schloss Charlottenburg",
+        "type": "Point",
+        "coordinates": [13.299652286917444, 52.51614237155977]
+      },
+      {
+        "description": "Berlin Wall Memorial",
+        "type": "Point",
+        "coordinates": [13.39028949391677, 52.538282830463196]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "61b0a63eb2460681a71bb038"
+    },
+    "name": "Barcelona",
+    "description": " Barcelona is a city on the coast of northeastern Spain.\r\nIt is the capital and largest city of the autonomous community of Catalonia, as well as the second most populous municipality of Spain. \r\nWith a population of 1.6 million within city limits, its urban area extends to numerous neighbouring municipalities within the Province of Barcelona and is home to around 4.8 million people, making it the fifth most populous urban area in the European Union after Paris, the Ruhr area, Madrid, and Milan. It is one of the largest metropolises on the Mediterranean Sea, located on the coast between the mouths of the rivers Llobregat and Besòs, and bounded to the west by the Serra de Collserola mountain range, the tallest peak of which is 512 metres (1,680 feet) high.\r\nFounded as a Roman city, in the Middle Ages Barcelona became the capital of the County of Barcelona. \r\nAfter joining with the Kingdom of Aragon to form the confederation of the Crown of Aragon, \r\nBarcelona, which continued to be the capital of the Principality of Catalonia, \r\nbecame the most important city in the Crown of Aragon and the main economic and administrative centre of the Crown, \r\nonly to be overtaken by Valencia, wrested from Arab domination by the Catalans, \r\nshortly before the dynastic union between the Crown of Castile and the Crown of Aragon in 1492. \r\nBarcelona has a rich cultural heritage and is today an important cultural centre and a major tourist destination. \r\nParticularly renowned are the architectural works of Antoni Gaudí and Lluís Domènech i Montaner, \r\nwhich have been designated UNESCO World Heritage Sites. \r\nThe city is home to two of the most prestigious universities in Spain: \r\nthe University of Barcelona and Pompeu Fabra University. \r\nThe headquarters of the Union for the Mediterranean are located in Barcelona. \r\nThe city is known for hosting the 1992 Summer Olympics as well as world-class conferences \r\nand expositions and also many international sport tournaments.\r\nBarcelona is a major cultural, economic, and financial centre in southwestern Europe,\r\nas well as the main biotech hub in Spain.[9] As a leading world city, \r\nBarcelona's influence in global socio-economic affairs qualifies it for global city status.\r\nBarcelona is a transport hub, with the Port of Barcelona being one of Europe's principal seaports and busiest European passenger port,\r\n an international airport, Barcelona–El Prat Airport, which handles over 50 million passengers per year, an extensive motorway network, and a high-speed rail line with a link to France and the rest of Europe.\r\n\r\nSource: Wikipedia/Barcelona",
+    "image": "https://res.cloudinary.com/dijmqauxw/image/upload/v1638966845/tour-project/ixpgf03dazpjws079nin.jpg",
+    "tourGuide": {
+      "$oid": "61b0a055b2460681a71bb018"
+    },
+    "mapData": {
+      "description": "Barcelona, Spain",
+      "type": "Point",
+      "coordinates": [2.162152849391072, 41.49141063473779],
+      "message": "'Our generous argentine Tour guide will show you the most secret places in this amazing city"
+    },
+    "locations": [
+      {
+        "description": "Plaza de España",
+        "type": "Point",
+        "coordinates": [2.1498272250996413, 41.3769863761877]
+      },
+      {
+        "description": "Plaza de Cataluña",
+        "type": "Point",
+        "coordinates": [2.1693966220575036, 41.38973738373506]
+      },
+      {
+        "description": "Arco de Triunfo de Barcelona",
+        "type": "Point",
+        "coordinates": [2.1802112888113925, 41.39733527989491]
+      },
+      {
+        "description": "Rambla de Mar",
+        "type": "Point",
+        "coordinates": [2.1809837650080053, 41.37589147578127]
+      },
+      {
+        "description": "Plaza de Gaudí",
+        "type": "Point",
+        "coordinates": [2.1789238284835957, 41.40512542094733]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "61b0a865b2460681a71bb03d"
+    },
+    "name": "Leipzig",
+    "description": "Leipzig is the most populous city in the German state of Saxony. \nWith a population of 605,407 inhabitants as of 2021 \n(1.1 million residents in the larger urban zone), \nit is Germany's eighth most populous city, as well as the second most populous city in the area of former East Germany after (East) Berlin.\nTogether with Halle (Saale), the largest city of the neighbouring state of Saxony-Anhalt, \nthe city forms the polycentric conurbation of Leipzig-Halle. Between the two cities (in Schkeuditz) lies Leipzig/Halle Airport.\nLeipzig is located about 160 kilometres (100 mi) southwest of Berlin in the Leipzig Bay, \nwhich constitutes the southernmost part of the North German Plain, at the confluence of the White Elster River \nand two of its tributaries: the Pleiße and the Parthe. \nThe name of the city as well as the names of many of its boroughs are of Slavic origin.\nLeipzig has been a trade city since at least the time of the Holy Roman Empire.\nThe city sits at the intersection of the Via Regia and the Via Imperii, \ntwo important medieval trade routes. Leipzig was once one of the major European centres of learning and culture in fields such as music and publishing.\nAfter the Second World War and during the period of the German Democratic Republic (East Germany) Leipzig remained a major urban centre in East Germany, \nbut its cultural and economic importance declined. Events in Leipzig in 1989 played a significant role in precipitating the fall of communism in Central and Eastern Europe, \nmainly through demonstrations starting from St. Nicholas Church. \nThe immediate effects of the reunification of Germany included the collapse of the local economy \n(which had come to depend on highly polluting heavy industry), severe unemployment, and urban blight. \nStarting around 2000, however, the decline was first arrested and then reversed and, since then, \nLeipzig has seen significant changes with the restoration of major historical buildings, \nthe demolition of derelict properties of little historical value, and the development of new industries and a modern transport infrastructure.\nLeipzig today is an economic centre, is rated as the most livable city in Germany by the GfK marketing research institution, and has the second-best future prospects of all cities in Germany according to the Hamburg Institute of International Economics (HWWI) and Berenberg Bank.[16][17] The city is one of two seats of the German National Library, as well as the seat of the German Federal Administrative Court. Leipzig Zoo is one of the most modern zoos in Europe and ranks first in Germany and second in Europe.[18][19] Since the opening of the Leipzig City Tunnel in 2013, Leipzig forms the centrepiece of the S-Bahn Mitteldeutschland public transit system.[20] Leipzig is currently listed as a \"Sufficiency\" level global city by the Globalization and World Cities Research Network,[21] Germany's \"Boomtown\"[22] and was the 2019 European City of the Year.\nLeipzig has long been a major centre for music, both classical as well as modern \"dark alternative music\" or darkwave genres. \nThe Oper Leipzig is one of the most prominent opera houses in Germany. \nLeipzig is also home to the University of Music and Theatre \"Felix Mendelssohn Bartholdy\". \nThe Leipzig Gewandhaus Orchestra, established in 1743, is one of the oldest symphony orchestras in the world. \nJohann Sebastian Bach is one among many major composers who lived and worked in Leipzig and, during a stay in the city, \nFriedrich Schiller wrote his poem \"Ode to Joy\".",
+    "image": "https://res.cloudinary.com/dijmqauxw/image/upload/v1638967396/tour-project/zqlx7oqn5p23hdijxmft.jpg",
+    "tourGuide": {
+      "$oid": "61b09df1b2460681a71bb009"
+    },
+    "mapData": {
+      "description": "Leipzig, Germany",
+      "type": "Point",
+      "coordinates": [12.37129, 51.33962],
+      "message": "Be totally hooked with this city with our unique Tour guide, and prepare for the best Music too!"
+    },
+    "locations": [
+      {
+        "description": "Grassi Museum of Applied Arts",
+        "type": "Point",
+        "coordinates": [12.408047114025146, 51.34470137789239]
+      },
+      {
+        "description": "Monument to the Battle of the Nations",
+        "type": "Point",
+        "coordinates": [12.43688622533147, 51.31681427838218]
+      },
+      {
+        "description": "Gohliser Schlösschen",
+        "type": "Point",
+        "coordinates": [12.372537754829715, 51.35874753117509]
+      },
+      {
+        "description": "Marktplatz Leipzig",
+        "type": "Point",
+        "coordinates": [12.37039198761513, 51.34175435380264]
+      },
+      {
+        "description": "Forum of Contemporary History Leipzig",
+        "type": "Point",
+        "coordinates": [12.373653553770557, 51.340494356325515]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "61b0ab20b2460681a71bb042"
+    },
+    "name": "Philadelphia",
+    "description": "Philadelphia (colloquially known simply as Philly) is a city in the Commonwealth of Pennsylvania in the United States.\nIt is the sixth-most-populous city in the United States and the most populous city in the state of Pennsylvania, \nwith a 2020 population of 1,603,797. It is also the second-most populous city in the Northeastern United States, \nbehind New York City. Since 1854, the city has had the same geographic boundaries as Philadelphia County, \nthe most-populous county in Pennsylvania and the urban core of the eighth-largest U.S. metropolitan statistical area, \nwith over 6 million residents as of 2017. Philadelphia is also the economic and cultural center of the greater Delaware Valley \nalong the lower Delaware and Schuylkill rivers within the Northeast megalopolis. \nThe Delaware Valley's 2019 estimated population of 7.21 million makes it the ninth-largest \ncombined statistical area in the United States.\nPhiladelphia is one of the oldest municipalities in the United States. \nWilliam Penn, an English Quaker, founded the city in 1682 to serve as capital of the Pennsylvania Colony.\n Philadelphia played an instrumental role in the American Revolution as a meeting place for \n the Founding Fathers of the United States, who signed the Declaration of Independence in 1776 \n at the Second Continental Congress, and the Constitution at the Philadelphia Convention of 1787. \n Several other key events occurred in Philadelphia during the Revolutionary War including the First Continental Congress, \n the preservation of the Liberty Bell, the Battle of Germantown, \n and the Siege of Fort Mifflin. Philadelphia remained the nation's largest city until being overtaken by New York City in 1790; \n the city was also one of the nation's capitals during the revolution, serving as temporary U.S. capital while Washington, D.C. \n was under construction. In the 19th and 20th centuries, Philadelphia became a major industrial center and a railroad hub.\nThe city grew due to an influx of European immigrants, most of whom initially came from Ireland and Germany — \n the two largest reported ancestry groups in the city as of 2015. \nLater immigrant groups in the 20th century came from Italy \n(Italian being the third largest European ethnic ancestry currently reported in Philadelphia) \nand other Southern European and Eastern European countries.[12] In the early 20th century, \nPhiladelphia became a prime destination for African Americans during the Great Migration after the Civil War. \nPuerto Ricans began moving to the city in large numbers in the period between World War I and II, \nand in even greater numbers in the post-war period. \nThe city's population doubled from one million to two million people between 1890 and 1950.\n\nThe Philadelphia area's many universities and colleges make it a top study destination, \nas the city has evolved into an educational and economic hub. \nAs of 2019, the Philadelphia metropolitan area is estimated to produce a gross metropolitan product \n(GMP) of $490 billion.[17] Philadelphia is the center of economic activity in Pennsylvania and is home to five Fortune 1000 companies. \nThe Philadelphia skyline is expanding, with a market of almost 81,900 commercial properties in 2016,\n including several nationally prominent skyscrapers.\n  Philadelphia has more outdoor sculptures and murals than any other American city.[20][21] Fairmount Park, \n  when combined with the adjacent Wissahickon Valley Park in the same watershed, is one of the largest contiguous urban park areas in the United States.\n   The city is known for its arts, culture, cuisine, and colonial history, \n   attracting 42 million domestic tourists in 2016 who spent $6.8 billion, generating an estimated\n    $11 billion in total economic impact in the city and surrounding four counties of Pennsylvania.\n     Philadelphia is also a biotechnology hub.\n\nPhiladelphia is the home of many U.S. firsts, \nincluding the nation's first library (1731), hospital (1751), medical school (1765),\n national capital (1774), university (by some accounts) (1779), stock exchange (1790), zoo (1874),\n  and business school (1881). Philadelphia contains 67 National Historic Landmarks and the World Heritage \n  Site of Independence Hall. The city became a member of the Organization of World Heritage Cities in 2015,\n   as the first World Heritage City in the United States.",
+    "image": "https://res.cloudinary.com/dijmqauxw/image/upload/v1638968095/tour-project/rx0xj9grz3v868faojgf.jpg",
+    "tourGuide": {
+      "$oid": "61b0a175b2460681a71bb022"
+    },
+    "mapData": {
+      "description": "Philadelphia, USA",
+      "type": "Point",
+      "coordinates": [-75.07961245713203, 39.99374438675624],
+      "message": "Maybe you wonder why this city is so amazing, our passionate Tour guide will help you to find out!"
+    },
+    "locations": [
+      {
+        "description": "Rocky steps",
+        "type": "Point",
+        "coordinates": [-75.17514457199033, 39.96663052904943]
+      },
+      {
+        "description": "The Cliffs",
+        "type": "Point",
+        "coordinates": [-75.18836249800573, 39.98215337523472]
+      },
+      {
+        "description": "National Liberty Museum",
+        "type": "Point",
+        "coordinates": [-75.14450301622414, 39.94998559594681]
+      },
+      {
+        "description": "Philadelphia's Magic Gardens",
+        "type": "Point",
+        "coordinates": [-75.15437354538916, 39.94380028034599]
+      },
+      {
+        "description": "Independence National Historical Park",
+        "type": "Point",
+        "coordinates": [-75.14884238110561, 39.95092285604814]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "61b0acf8b2460681a71bb047"
+    },
+    "name": "Aarhus",
+    "description": "Aarhus is a university town located in Jutland, Denmark’s western province. \nIt’s a small town and there’s not a lot to “do” here that would keep you here for days and days like in Copenhagen.\nHowever, I found that to be the strength of the town.\nIt’s quiet. There are a lot of parks to wander through (the one near the university is especially peaceful). \nThere’s a lively music scene and a lot of cheap food thanks to a thriving community of poor university students that make up most of the population.\nIn short, Aarhus is a calming contrast to busy Copenhagen and it’s worth spending 2-3 nights here.\n\nAarhus (officially spelled Århus from 1948 until 1 January 2011) is the second-largest city in Denmark \nand the seat of Aarhus municipality. \nIt is located on the eastern shore of Jutland in the Kattegat sea and approximately \n187 kilometres (116 mi) northwest of Copenhagen.\n\nThe largest city in Jutland, \nAarhus anchors the Central Denmark Region and the statistical region Landsdel Østjylland (LØ). \nThe LØ is the second most populous statistical region in Denmark with an estimated population of 903,974 \n(as of 1 January 2021). Aarhus Municipality defines the greater Aarhus area as itself and \n8 adjacent municipalities totalling 952,824 inhabitants (as of 1 January 2021) \nwhich is roughly analogous to the municipal and commercial collaboration Business Region Aarhus.\nThe city proper, with an estimated population of 282,910 inhabitants (as of 2021), ranks as the 2nd-largest city in Denmark.\n\nAarhus dates back to at least the late 8th century and is among the oldest cities in Denmark. \nIt was founded as a harbour settlement at the mouth of the Aarhus River and quickly became a trade hub.\nThe first Christian church was built here around the year 900 and later in the Viking Age the town was \nfortified with defensive ramparts. The Viking Age was turbulent and violent, also for Aros, \nas the town was called back then, but in spite of the difficulties, the bishopric of Aarhus grew steadily stronger \nand more prosperous, building several religious institutions in the town during the early Middle Ages. \nTrade continued to improve, although it was not until 1441 that Aarhus was granted Market town privileges, \nand the population of Aarhus remained relatively stable until the 19th century. \nThe 1600s, in particular, was a difficult time for Aarhus as the town suffered from several wars and the plague, \nand trade was also dampened by the state in favour of the royal seat of Copenhagen.\n Nevertheless, Aarhus grew to become the second biggest town in Denmark during that time,\nand in the middle of the 1700s, the once prosperous trade growth returned. \nThe industrial revolution became an inflection point in the 19th century, \nas industry drove a rapid population growth, outpacing regional rivals, \nand the first railway line in Jutland was built here in 1862. \nIn 1928, the first university in Jutland was founded in Aarhus and today it is a university city \nand the largest centre for trade, services, industry, and tourism in Jutland.",
+    "image": "https://res.cloudinary.com/dijmqauxw/image/upload/v1638968567/tour-project/rzoekwmvg7cxspyapgjj.jpg",
+    "tourGuide": {
+      "$oid": "61af604a0afaa21cb95b1697"
+    },
+    "mapData": {
+      "description": "Aarhus, Denmark",
+      "type": "Point",
+      "coordinates": [10.21076, 56.15674],
+      "message": "Are you looking for new adventures? You are in the right city, our courageous Tour guide will show you the best!"
+    },
+    "locations": [
+      {
+        "description": "ARoS",
+        "type": "Point",
+        "coordinates": [10.199339149858382, 56.15612506843413]
+      },
+      {
+        "description": "Museerne i Uniparken",
+        "type": "Point",
+        "coordinates": [10.198909996416324, 56.16644887806143]
+      },
+      {
+        "description": "Steno Museum",
+        "type": "Point",
+        "coordinates": [10.202772377394849, 56.16606656422033]
+      },
+      {
+        "description": "Catedral de San Clemente de Aarhus",
+        "type": "Point",
+        "coordinates": [10.21041130866216, 56.158706280871215]
+      },
+      {
+        "description": "Havnefronten",
+        "type": "Point",
+        "coordinates": [10.215046165833401, 56.15829999033973]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "61b0aebab2460681a71bb04c"
+    },
+    "name": "Mieres",
+    "description": "Mieres is a municipality of Asturias, northern Spain, \nwith approximately 38,000 inhabitants. The municipality of Mieres is made up of the capital, \nMieres del Camino and the villages of Baiña, Figaredo, Cenera, Loredo, La Peña, La Rebollada, Santullano, S\nanta Rosa, Seana, Ujo, Urbies, Valdecuna, Santa Cruz, Ablaña, Turón, Gallegos, Bustiello.\nMieres is the heart of the coal mining industry in Spain. \nThe topography of Mieres is mountainous with the greatest population centers being located in the \nvalley along the banks of the Caudal River (Río Caudal) valley in the center of Asturias.\nBefore the Spanish Industrial Restructuring Mieres was one of the industrial backbones of Asturias, \nand hosted 70000 inhabitants in the 1960s. Today Mieres shelters a campus of the University of Oviedo and \ndifferent museums in relation with the industrial heritage.\n\nThe municipality of Mieres is served by bus routes and the regional rail lines FEVE and RENFE Cercanias,\nconnected with Oviedo, Gijón, León and Langreo.\nMieres’ most popular and important festival St. John's Bonfire (La Foguera de San Juan) occurs every June 24's eve,\nand is highlighted by a huge bonfire, cultural events, dancing, outdoor concerts, fireworks, al fresco dining and drinking.\nAnother important festival is the Folixa na Primavera in April (Spring Fiesta), which includes dance and music performances\nfrom the nine European Celtic regions, food, drink and especially cider, (sidra).",
+    "image": "https://res.cloudinary.com/dijmqauxw/image/upload/v1638969018/tour-project/c9fhvg0c5pzyzib34oab.jpg",
+    "tourGuide": {
+      "$oid": "61b0a175b2460681a71bb022"
+    },
+    "mapData": {
+      "description": "Mieres, Spain",
+      "type": "Point",
+      "coordinates": [-5.778204868283153, 43.251327057586984],
+      "message": "Meet the beauty of Asturias with our American and pretty lively Tour guide!"
+    },
+    "locations": [
+      {
+        "description": "Plaza de Requejo",
+        "type": "Point",
+        "coordinates": [-5.771756121698207, 43.252637492751965]
+      },
+      {
+        "description": "Iglesia San Juan",
+        "type": "Point",
+        "coordinates": [-5.77184468787611, 43.25282914029047]
+      },
+      {
+        "description": "Casa de Cultura Teodoro Cuesta",
+        "type": "Point",
+        "coordinates": [-5.770771804271193, 43.250641122322016]
+      },
+      {
+        "description": "Ayuntamiento de Mieres",
+        "type": "Point",
+        "coordinates": [-5.7687976984374965, 43.24932827378298]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "61b72819e0f0852ebc520517"
+    },
+    "name": "Budapest",
+    "description": "They call Budapest the Paris of the East and we certainly think it lives up to its reputation. \r\nIt has elegant boulevards. \r\nIt has so much beautiful architecture.\r\nBut it has much more grit and edge thanks to its years under communist rule. \r\nWalking its streets you can quickly tell that Budapest is a dynamic and living city.\r\n\r\nOne thing that makes Budapest so dynamic is its mix of Western and Eastern Europe. \r\nThe city is still transitioning, \r\nso more and more young Hungarians are breathing new and youthful life into this great city. \r\nIt’s still a little rough around the edges but that just adds to its charm.\r\n\r\nThe banks of the Danube river are listed as a UNESCO World Heritage Site so you should spend some time visiting the Danube Promenade. \r\nIt’s also a great place to see many of Budapest’s best sights.\r\n\r\nPerched above the city, Castle Hill is a must-visit neighborhood of Budapest. \r\nSome of the buildings date back to 14th and 15th centuries. Set aside a day to discover its winding cobble stone streets. \r\nThe area also contains many of Budapest’s top attractions like Trinity Square, Matthias Church (Mátyás templom), \r\nFishermen’s Bastion (Halászbástya), and Buda Castle.",
+    "image": "https://res.cloudinary.com/dijmqauxw/image/upload/v1639393304/tour-project/klw7c5n2pk032dse66gt.jpg",
+    "tourGuide": {
+      "$oid": "61af604a0afaa21cb95b1697"
+    },
+    "mapData": {
+      "description": "Budapest, Hungary",
+      "type": "Point",
+      "coordinates": [19.091819287085524, 47.55506932957828],
+      "message": "You won't be able to escape of this city, our passionate Tour guide will help you to find out why!"
+    },
+    "locations": [
+      {
+        "description": "Citadella",
+        "type": "Point",
+        "coordinates": [19.03900702762605, 47.49018837055659]
+      },
+      {
+        "description": "Castillo de Vajdahunyad",
+        "type": "Point",
+        "coordinates": [19.09102042481534, 47.51697624531959]
+      },
+      {
+        "description": "Országház",
+        "type": "Point",
+        "coordinates": [19.046098156769894, 47.50810663378128]
+      },
+      {
+        "description": "Budavári Palota",
+        "type": "Point",
+        "coordinates": [19.042664929235816, 47.49726373676762]
+      },
+      {
+        "description": "Nagy Vásárcsarnok",
+        "type": "Point",
+        "coordinates": [19.060946865869578, 47.487694614901585]
+      },
+      {
+        "description": "Hősök tere",
+        "type": "Point",
+        "coordinates": [19.070559902969933, 47.51703439660313]
+      }
+    ]
+  }
+]

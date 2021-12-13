@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
     });
 
   const imageProfile = document.querySelector('#imageInput');
-  if(imageProfile) {
+  if (imageProfile) {
     imageProfile.addEventListener('change', (event) => {
       const [file] = imageInput?.files;
       if (file) {
