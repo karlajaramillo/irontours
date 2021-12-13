@@ -1,30 +1,38 @@
 {{! views/tour-details.hbs }}
-<div class="wrapper-tour-details">
-  <div class="wrapper-tour-image">
+<div class='wrapper-tour-details'>
+  <div class='wrapper-tour-image'>
     <img src='{{tour.image}}' alt='' />
-    <div class="name-city-tour-details">
+    <div class='name-city-tour-details'>
       <div><h2>{{tour.name}}</h2></div>
       {{#if isLoggedIn}}
         {{#if isBooked}}
-          <div><a class="delete-tour-btn" href='/tours/{{tour._id}}/deleteBooking'>Delete Booking</a></div>
+          <div><a
+              class='delete-tour-btn'
+              href='/tours/{{tour._id}}/deleteBooking'
+            >Delete Booking</a></div>
         {{else}}
-          <div><a class="book-tour-btn" href='/tours/{{tour._id}}/book'>+ Book</a></div>
+          <div><a class='book-tour-btn' href='/tours/{{tour._id}}/book'>+ Book</a></div>
         {{/if}}
-        {{else}}
-          <div><a class="loginToBook-tour-btn" href='/login'>+ Log In to Book</a></div>
-        {{/if}}
+      {{else}}
+        <div><a class='loginToBook-tour-btn' href='/login'>+ Log In to Book</a></div>
+      {{/if}}
     </div>
   </div>
-  
-  <div class="description-tour-details">
+
+  <div class='description-tour-details'>
     <p>{{tour.description}}</p>
   </div>
   <ul>
     <li>
       {{!-- <img src={{userImage}} alt='profile image' class='main-profile-image'/> --}}
-      <img src={{tour.tourGuide.image}} alt='profile image' class='main-profile-image'/>
+      <img
+        src={{tour.tourGuide.image}}
+        alt='profile image'
+        class='main-profile-image'
+      />
     </li>
-    <li class="tour-guide-details">{{tour.tourGuide.name}}<span> • Tour guide</span></li>
+    <li class='tour-guide-details'>{{tour.tourGuide.name}}<span>
+        • Tour guide</span></li>
   </ul>
 
   {{#if isAdmin}}
@@ -33,3 +41,7 @@
   {{/if}}
 
 </div>
+
+<div class='map-wrapper' data-locations='{{json tour}}'><div
+    id='map'
+  ></div></div>
