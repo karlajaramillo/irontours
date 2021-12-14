@@ -7,9 +7,10 @@ const UserSchema = new Schema({
     trim: true,
     unique: true,
   },
+  googleId: String,
   password: {
     type: String,
-    required: [true, 'Please provide a valid password'],
+    // required: [true, 'Please provide a valid password'],
   },
   name: {
     type: String,

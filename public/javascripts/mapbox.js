@@ -217,7 +217,7 @@ mapJSON.forEach(function (marker) {
 map.fitBounds(bounds, {
   padding: {
     top: 50,
-    bottom: 50,
+    bottom: 200,
     left: 20,
     right: 20,
   },
