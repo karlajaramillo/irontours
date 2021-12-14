@@ -3,7 +3,15 @@
   <div class='wrapper-tour-image'>
     <img src='{{tour.image}}' alt='' />
     <div class='name-city-tour-details'>
-      <div><h2>{{tour.name}}</h2></div>
+      <div><h2>{{tour.name}}</h2>
+      {{#if isAdmin}}
+        <div>
+          <a class="update-tour-admin-btn" href='/tours/{{tour._id}}/edit'>Update Tour</a>
+          <a class="delete-tour-admin-btn" href='/tours/{{tour._id}}/delete'> Delete Tour</a>
+        </div>
+      {{/if}}
+      </div>
+
       {{#if isLoggedIn}}
         {{#if isBooked}}
           <div><a
@@ -22,6 +30,9 @@
   <div class='description-tour-details'>
     <p>{{tour.description}}</p>
   </div>
+  <div class='map-wrapper' data-locations='{{json tour}}'><div
+    id='map'
+  ></div></div>
   <ul>
     <li>
       {{!-- <img src={{userImage}} alt='profile image' class='main-profile-image'/> --}}
@@ -35,13 +46,6 @@
         • Tour guide</span></li>
   </ul>
 
-  {{#if isAdmin}}
-    <a href='/tours/{{tour._id}}/edit'>Update Tour</a>
-    <a href='/tours/{{tour._id}}/delete'>Delete</a>
-  {{/if}}
-
 </div>
 
-<div class='map-wrapper' data-locations='{{json tour}}'><div
-    id='map'
-  ></div></div>
+<script src='/javascripts/mapbox-details.js'></script>

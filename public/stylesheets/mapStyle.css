@@ -1,62 +1,91 @@
 .map-wrapper {
-    position: relative;
-    height: 30vh;
-  }
-  #map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .marker {
-    background-image: url('../images/pin.png');
-    background-size: cover;
-    width: 12px;
-    height: 16px;
-    cursor: pointer;
-  }
-  
-  #map p {
-    line-height: 1.5;
-    margin-bottom: 5px;
-  
-  }
-  .popup-name {
-    font-size: .6rem;
-    margin-bottom: 0;
-    color: #ffb835;
-  }
-  
-  .popup-tourGuide {
-    color: #ccd1d7;
-    font-size: .4rem;
-    margin-bottom: 0;
-    line-height: 1.5;
-  }
-  .popup-msg {
-    color: #fff;
-    font-size: .4rem;
-    margin-bottom: 0;
-  }
-  
-  #map .mapboxgl-popup-content {
-    width: 150px;
-    background: rgb(35 48 68 / 89%);
-  }
-  
-  .popup-img {
-    text-align: center;
-  }
-  .popup-img img{
-    width: 100px;
-    height: auto;
-  }
-  
-  #map .mapboxgl-popup-close-button {
-    color: #fff;
-  }
-  
-  #map .mapboxgl-popup-close-button:focus {
-    outline: 0;
-  }
+  position: relative;
+  height: 45vh;
+  margin: 50px 30px;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.marker {
+  background-image: url('../images/pin.png');
+  background-size: cover;
+  width: 20px;
+  height: 28px;
+  cursor: pointer;
+}
+
+#map p {
+  line-height: 1.5;
+  margin-bottom: 5px;
+
+}
+.popup-name {
+  font-size: .8rem;
+  margin-bottom: 0;
+  color: #ffb835;
+}
+
+.popup-tourGuide {
+  color: #ccd1d7;
+  font-size: .7rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+.popup-msg {
+  color: #fff;
+  font-size: .7rem;
+  margin-bottom: 0;
+}
+
+#map .mapboxgl-popup-content {
+  width: 200px;
+  background: rgb(35 48 68 / 89%);
+  padding: 20px;
+}
+
+#map .mapboxgl-popup-tip {
+  border-top-color: rgb(35 48 68 / 89%);
+}
+
+.popup-img {
+  text-align: center;
+  margin: 0 auto;
+}
+.popup-img img{
+  width: 150px;
+  height: auto;
+}
+
+#map .mapboxgl-popup-close-button {
+  color: #fff;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+#map .mapboxgl-popup-close-button:focus {
+  outline: 0;
+}
+
+#map .tourGuideInfo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#map .tourGuideInfo img {
+  padding-right: 10px;
+}
+
+#map .tourGuideInfo span {
+  color: #98c5f5;
+}
+
+#map .popup-name-details {
+  color: #fff;
+}

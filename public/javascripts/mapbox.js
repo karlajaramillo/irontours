@@ -187,7 +187,15 @@ mapJSON.forEach(function (marker) {
   }).setLngLat(marker.mapData.coordinates).setHTML(`
          <p class="popup-name">${marker.mapData.description}</p> 
          <p class="popup-msg">${marker.mapData.message}</p>
-         <p class="popup-tourGuide">Tour guide: ${marker.tourGuide}</p>
+         <div class="tourGuideInfo">
+            <img
+              src=${marker.tourGuide.image}
+              alt='profile image'
+              class='main-profile-image'
+            />
+            <p class="popup-tourGuide">${marker.tourGuide.name}<span> • Tour guide</span></p>
+          </div>
+  
          <div class="popup-img"><img class="popup-img"src=${marker.image} alt="${marker.mapData.description}"></div>
          `);
 
