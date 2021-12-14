@@ -60,7 +60,12 @@ router.post(
 // CRUD - Read
 router.get('/tours/:id/book', async (req, res) => {
   try {
-    const userId = req.session.currentUser._id;
+    let userId;
+    if (req.isAuthenticated()) {
+      userId = req.user._id;
+    } else {
+      userId = req.session.currentUser._id;
+    }
     const { id } = req.params;
 
     const bookedTour = await User.findByIdAndUpdate(
@@ -83,7 +88,12 @@ router.get('/tours/:id/book', async (req, res) => {
 router.get('/tours/:id/deleteBooking', async (req, res) => {
   try {
     const { id } = req.params;
-    const userId = req.session.currentUser._id;
+    let userId;
+    if (req.isAuthenticated()) {
+      userId = req.user._id;
+    } else {
+      userId = req.session.currentUser._id;
+    }
 
     const bookedTour = await User.findByIdAndUpdate(
       userId,

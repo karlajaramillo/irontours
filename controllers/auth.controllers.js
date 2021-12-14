@@ -29,7 +29,6 @@ function isMongoError(error) {
   return error.code === 11000;
 }
 
-
 async function signup(req, res) {
   try {
     const { email, password } = req.body;
@@ -101,10 +100,19 @@ async function login(req, res) {
 async function logout(req, res) {
   try {
     await req.session.destroy();
+    req.logout();
     return res.redirect('/');
   } catch (err) {
     console.log(err);
   }
 }
 
-module.exports = { getLogin, getSignup, signup, login, logout, isValidationError, isMongoError };
+module.exports = {
+  getLogin,
+  getSignup,
+  signup,
+  login,
+  logout,
+  isValidationError,
+  isMongoError,
+};
