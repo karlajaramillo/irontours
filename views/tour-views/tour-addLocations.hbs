@@ -1,0 +1,41 @@
+{{! views/tour-views/tour-addLocations.hbs }}
+<div class='create-tour-view'>
+  <div class='create-tour-container'>
+    <img src='/images/logo.png' alt='Ironhack-logo' class='create-tour-logo' />
+    <form
+      action='/tours/{{tour._id}}/addLocations'
+      method='post'
+      class='create-tour-form'
+    >
+      {{! <label>Name: }}
+    {{! </label> }}
+    {{! <label>Description: }}
+    <input
+        type='text'
+        name='description'
+        placeholder='Description'
+        class='create-tour-input'
+    />
+    <input
+        type='text'
+        name='lat'
+        placeholder='Latitud'
+        class='create-tour-input'
+    />
+      <input
+        type='text'
+        name='long'
+        placeholder='Longitud'
+        class='create-tour-input'
+      />
+
+      {{! </label> }}
+
+      {{! </label> }}
+      <button type='submit' class='create-tour-btn'>Create</button>
+    </form>
+    {{#if err}}
+      <p class='signup-error'>{{err}}</p>
+    {{/if}}
+  </div>
+</div>

@@ -9,12 +9,17 @@ const {
   isMongoError,
 } = require('../controllers/auth.controllers');
 
+
+
 // CRUD - Create
 router.get('/tours/create', isAdmin, async (req, res) => {
   try {
+    let isLoggedIn = true;
+    let userImage = req.session?.currentUser?.image;
+
     const guides = await User.find({ role: 'guide' });
     const { err } = req.query;
-    res.render('tour-views/tour-create', { guides, err });
+    res.render('tour-views/tour-create', { guides, isLoggedIn, userImage, err });
   } catch (err) {
     console.error('error', err);
     next(err);
@@ -27,22 +32,26 @@ router.post(
   fileUploader.single('tour-cover-image'),
   async (req, res) => {
     try {
-      const { name, description, tourGuide } = req.body;
+      const { name, description, tourGuide, lat, long } = req.body;
       // console.log(req.body);
 
       // error handling
       const hasMissingNameDescriptionTourGuide =
-        !name || !description || !tourGuide;
+        !name || !description || !tourGuide || !lat ||!long;
       if (hasMissingNameDescriptionTourGuide) {
         return res.redirect(
-          '/tours/create?err=Missing name or description or tour guide'
+          '/tours/create?err=Missing credentials'
         );
       }
-
+      const mapData = { 
+        type: "Point", 
+        coordinates: [long, lat]
+      }
       const newTour = await Tour.create({
         name,
         description,
         tourGuide,
+        mapData,
         image: req.file?.path,
       });
       // console.log(newTour);
@@ -59,7 +68,7 @@ router.post(
     }
   }
 );
-
+//30.835888237339596, -82.7599515725407
 // CRUD - Read
 router.get('/tours/:id', async (req, res) => {
   try {
@@ -103,12 +112,15 @@ router.get('/tours/:id', async (req, res) => {
 // CRUD - Show Update view - only Admin
 router.get('/tours/:id/edit', isAdmin, async (req, res) => {
   try {
+    let isLoggedIn = true;
+    let userImage = req.session?.currentUser?.image;
+
     const { id } = req.params;
     const { err } = req.query;
     const tour = await Tour.findById(id).populate('tourGuide');
     const guides = await User.find({ role: 'guide' });
     //const user = req.session.currentUser;
-    res.render('tour-views/tour-update', { tour, guides, err });
+    res.render('tour-views/tour-update', { tour, guides, isLoggedIn, userImage, err });
   } catch (err) {
     console.error('error', err);
     next(err);
@@ -122,23 +134,30 @@ router.post(
   async (req, res) => {
     try {
       const { id } = req.params;
-      const { name, description, tourGuide } = req.body;
+      const { name, description, tourGuide, lat, long } = req.body;
       //console.log(req.body);
 
       // error handling
       const hasMissingNameDescriptionTourGuide =
-        !name || !description || !tourGuide;
+        !name || !description || !tourGuide || !lat || !long;
       if (hasMissingNameDescriptionTourGuide) {
         return res.redirect(
-          `/tours/${id}/edit?err=Missing name or description or tour guide`
+          `/tours/${id}/edit?err=Missing credentials`
         );
       }
+
+      const mapData = { 
+        type: "Point", 
+        coordinates: [long, lat]
+      }
+
       const tour = await Tour.findByIdAndUpdate(
         id,
         {
           name,
           description,
           tourGuide,
+          mapData,
           image: req.file?.path,
         },
         { new: true }
@@ -167,6 +186,55 @@ router.get('/tours/:id/delete', isAdmin, async (req, res) => {
     const { id } = req.params;
     const tour = await Tour.findByIdAndDelete(id);
     res.redirect('/');
+  } catch (err) {
+    console.error('error', err);
+    next(err);
+  }
+});
+
+
+// CRUD - Update tour - add locations - only Admin
+router.get('/tours/:id/addLocations', isAdmin, async (req, res) => {
+  try {
+    let isLoggedIn = true;
+    let userImage = req.session?.currentUser?.image;
+
+    const { id } = req.params;
+    const { err } = req.query;
+    const tour = await Tour.findById(id).populate('tourGuide');
+    //const user = req.session.currentUser;
+    //res.send('hello')
+    res.render('tour-views/tour-addLocations', { tour, isLoggedIn, userImage, err });
+  } catch (err) {
+    console.error('error', err);
+    next(err);
+  }
+});
+
+// CRUD
+///tours/{{_id}}/addLocations
+router.post('/tours/:id/addLocations', isAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { lat, long, description } = req.body;
+    console.log(lat, long, description);
+
+    const location = {
+      description,
+      coordinates: [long, lat]
+    }
+
+    console.log(location)
+    const newTour = await Tour.findByIdAndUpdate(
+      id,
+      {
+        $push: { locations: location },
+      },
+      { new: true }
+    );
+
+    res.redirect(`/tours/${id}`)
+    
   } catch (err) {
     console.error('error', err);
     next(err);
