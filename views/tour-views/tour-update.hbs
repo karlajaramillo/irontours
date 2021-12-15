@@ -22,7 +22,22 @@
       <textarea name='description' class='create-tour-input' rows='10' >
         {{tour.description}}</textarea>
       {{! </label> }}
-
+      <input
+        type='text'
+        name='lat'
+        placeholder='Latitud'
+        class='create-tour-input'
+        value='{{tour.mapData.coordinates.[1]}}'
+        required
+      />
+      <input
+        type='text'
+        name='long'
+        placeholder='Longitud'
+        class='create-tour-input'
+        value='{{tour.mapData.coordinates.[0]}}'
+        required
+      />
       <select
         name='tourGuide'
         id='tour-guide'

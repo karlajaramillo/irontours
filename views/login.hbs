@@ -21,9 +21,15 @@
       />
       <button type='submit' class='login-btn'>Log in</button>
     </form>
-    <div>
-      <a href='/auth/google' class='login-btn'>Login With Google</a>
+    <div class="section-auth-google">
+      <a href="/auth/google" class="btn red darken-1">
+        <i class="fab fa-google left"></i> Log In With Google
+      </a>
     </div>
+
+    {{!-- <div>
+      <a href='/auth/google' class='login-btn'>Login With Google</a>
+    </div> --}}
     {{#if err}}
       <p class='login-error'>{{err}}</p>
     {{/if}}

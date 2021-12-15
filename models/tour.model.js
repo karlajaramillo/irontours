@@ -7,8 +7,6 @@ const TourSchema = new Schema({
       default: 'Point',
     },
     coordinates: [Number],
-    description: String,
-    message: String,
   },
   name: {
     type: String,

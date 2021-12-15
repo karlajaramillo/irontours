@@ -87,3 +87,14 @@
   margin: 0 auto;
   text-align: center;
 }
+
+
+.section-auth-google {
+  margin-top: 20px;
+  text-align: center;
+}
+.section-auth-google a {
+  color: #fff;
+  background-color: #E53935 !important;
+  padding: 10px 30px;
+}

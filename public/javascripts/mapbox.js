@@ -1,9 +1,14 @@
 console.log(
   JSON.parse(document.querySelector('.map-wrapper').dataset.locations)
 );
-const mapJSON = JSON.parse(
+
+
+const mapJSONAll = JSON.parse(
   document.querySelector('.map-wrapper').dataset.locations
 );
+
+const mapJSON = mapJSONAll.filter(item => item.mapData.coordinates[0]);
+console.log(mapJSON)
 
 mapboxgl.accessToken =
   'pk.eyJ1Ijoia2F2YWphZ2EiLCJhIjoiY2t4M3Nud3N0MHoxcTMwdXFuaDQxenFuOSJ9.v3tfGQnVF20m543RqwLWlA';
@@ -185,8 +190,8 @@ mapJSON.forEach(function (marker) {
     offset: 10,
     //closeOnClick: false
   }).setLngLat(marker.mapData.coordinates).setHTML(`
-         <p class="popup-name">${marker.mapData.description}</p> 
-         <p class="popup-msg">${marker.mapData.message}</p>
+         <p class="popup-name">${marker.name}</p> 
+         <p class="popup-msg">${marker.description.slice(0, 100)}...</p>
          <div class="tourGuideInfo">
             <img
               src=${marker.tourGuide.image}
@@ -196,7 +201,7 @@ mapJSON.forEach(function (marker) {
             <p class="popup-tourGuide">${marker.tourGuide.name}<span> • Tour guide</span></p>
           </div>
   
-         <div class="popup-img"><img class="popup-img"src=${marker.image} alt="${marker.mapData.description}"></div>
+         <div class="popup-img"><img class="popup-img"src=${marker.image} alt="${marker.name}"></div>
          `);
 
   // create the DOM element for the marker

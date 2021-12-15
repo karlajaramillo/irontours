@@ -38,7 +38,7 @@
 
 .wrapper-tour-image .name-city-tour-details {
   position: absolute;
-  bottom: 3%;
+  bottom: 2%;
   left: 0;
   z-index: 1000;
 }
@@ -47,7 +47,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 10px 0px 10px;
   margin: 0 auto;
   align-items: center;
 }
@@ -99,12 +99,16 @@
 }
 
 .delete-tour-btn {
-  padding: 8px;
-  border: 2px solid #ff5454;
   text-transform: uppercase;
   color: #ff5454;
   font-weight: 600;
   text-shadow: -1px -1px 2px rgb(63, 60, 60);
+}
+
+
+.delete-booking-wrapper {
+  border: 2px solid #ff5454;
+  text-align: center;
 }
 
 .description-tour-details {
@@ -114,7 +118,8 @@
 }
 
 .update-tour-admin-btn, 
-.delete-tour-admin-btn  {
+.delete-tour-admin-btn,
+.location-tour-admin-btn  {
   padding: 5px;
   border: 1px solid #fff;
   text-transform: uppercase;
@@ -123,6 +128,7 @@
   text-shadow: 0px 0px 1px rgb(63, 60, 60);
   font-size: .7rem;
   border-radius: 20px;
+  margin-bottom: 2%;
 }
 
 .update-tour-admin-btn:hover, 
@@ -139,6 +145,10 @@
   background-color: #f58c33;
 }
 
+.location-tour-admin-btn {
+  background-color: #c2c504;
+  
+}
 
 @media all and (min-width: 650px) {
   .wrapper-tour-image::after {
@@ -153,4 +163,15 @@
   .wrapper-tour-image {
     height: 80vh;
   }
+}
+
+
+.city-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttons-admin-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
