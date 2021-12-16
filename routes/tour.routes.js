@@ -121,7 +121,17 @@ router.get('/tours/:id', async (req, res) => {
     console.log(isBooked);
 
     const today = new Date();
-    const date = `${today.getFullYear()}-${(today.getMonth()+1)}-${today.getDate()}`
+    //const date = `${today.getFullYear()}-${(today.getMonth()+1)}-${today.getDate()}`
+ 
+
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayName = days[today.getDay()];
+
+    const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+    const date = event.toLocaleDateString('en-US', options);
+
     // axios
     const weather = await getWeather(tour.name);
   
@@ -133,8 +143,9 @@ router.get('/tours/:id', async (req, res) => {
       isUser,
       userImage,
       isBooked,
+      weather,
       date,
-      weather
+      dayName
     });
   } catch (err) {
     console.error('error', err);
