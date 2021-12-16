@@ -74,7 +74,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 80px;
+  height: 86px;
   width: 100%;
   z-index: 900;
   opacity: 0.65;
@@ -84,13 +84,19 @@
 
 .loginToBook-tour-btn,
 .book-tour-btn {
-  padding: 8px;
-  border: 2px solid #ffb835;
   text-transform: uppercase;
   color: #ffb835;
   font-weight: 600;
   text-shadow: -1px -1px 2px rgb(63, 60, 60);
 }
+
+.wrapper-book-tour-btn, 
+.wrapper-loginToBook-btn {
+  padding: 8px;
+  border: 2px solid #ffb835;
+  margin-top: 6px;
+}
+
 
 .loginToBook-tour-btn:hover,
 .book-tour-btn:hover,
@@ -109,6 +115,7 @@
 .delete-booking-wrapper {
   border: 2px solid #ff5454;
   text-align: center;
+  padding: 4px 10px;
 }
 
 .description-tour-details {
@@ -120,7 +127,7 @@
 .update-tour-admin-btn, 
 .delete-tour-admin-btn,
 .location-tour-admin-btn  {
-  padding: 5px;
+  padding: 7px 5px 5px 5px;
   border: 1px solid #fff;
   text-transform: uppercase;
   color: #fff;
@@ -143,16 +150,29 @@
 
 .delete-tour-admin-btn {
   background-color: #f58c33;
+  margin-right: 8px;
 }
 
 .location-tour-admin-btn {
   background-color: #c2c504;
-  
+}
+
+
+.city-buttons {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap;
+  flex: 1; */
+}
+
+.buttons-admin-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media all and (min-width: 650px) {
   .wrapper-tour-image::after {
-    height: 80px;
+    height: 90px;
   }
   .wrapper-tour-image {
     height: 500px;
@@ -166,12 +186,16 @@
 }
 
 
-.city-buttons {
-  display: flex;
-  flex-wrap: wrap;
+
+@media (min-width: 321px) and (max-width: 375px) { 
+  .wrapper-tour-image::after {
+    height: 130px;
+  }
 }
 
-.buttons-admin-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+@media (min-width: 100px) and (max-width: 320px) { 
+  .wrapper-tour-image::after {
+    height: 130px;
+  }
 }
+

@@ -1,6 +1,15 @@
 {{! views/tour-details.hbs }}
 <div class='wrapper-tour-details'>
   <div class='wrapper-tour-image'>
+    <div class="wrapper-weather">
+      <p class="weather-day">{{dayName}}</p>
+      <p class="weather-date">{{date}}</p>
+      <p class="weather-temp">{{weather.temp}}ºC</p>
+      <div class="wrapper-weather-icon">
+        <img class="weather-icon" src="{{weather.icon}}" alt="{{weather.desc}}">
+      </div>
+      <p class="weather-desc">{{weather.desc}}</p>
+    </div>
     <img src='{{tour.image}}' alt='' />
     <div class='name-city-tour-details'>
       <div class="city-buttons"><h2>{{tour.name}}</h2>
@@ -19,12 +28,12 @@
           <div class="delete-booking-wrapper"><a
               class='delete-tour-btn'
               href='/tours/{{tour._id}}/deleteBooking'
-            >Delete Booking</a></div>
+            >Delete  <br/> Booking</a></div>
         {{else}}
-          <div><a class='book-tour-btn' href='/tours/{{tour._id}}/book'>+ Book</a></div>
+          <div class="wrapper-book-tour-btn"><a class='book-tour-btn' href='/tours/{{tour._id}}/book'>+ Book</a></div>
         {{/if}}
       {{else}}
-        <div><a class='loginToBook-tour-btn' href='/login'>+ Log In to Book</a></div>
+        <div class="wrapper-loginToBook-btn"><a class='loginToBook-tour-btn' href='/login'>+ Log In to Book</a></div>
       {{/if}}
     </div>
   </div>
@@ -36,16 +45,7 @@
     id='map'
   ></div></div>
 
-  <div>
-    <p>{{dayName}}</p>
-    <p>{{date}}</p>
-    <p>{{weather.temp}}ºC</p>
-    <p>{{weather.desc}}</p>
-    <img src="{{weather.icon}}" alt="">
-    
-  
 
-  </div>
   <ul>
     <li>
       {{!-- <img src={{userImage}} alt='profile image' class='main-profile-image'/> --}}
