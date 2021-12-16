@@ -19,7 +19,7 @@ async function getWeather(city) {
     const response = await axios.get(url);
     //console.log(response);
     //console.log(response.data)
-    const kelvinToCelsius = (+response.data.main.temp - 273.15).toFixed(2);
+    const kelvinToCelsius = (+response.data.main.temp - 273.15).toFixed();
     const weather = {
       desc: response.data.weather[0].description,
       icon: `https://openweathermap.org/img/w/${response.data.weather[0].icon}.png`,
