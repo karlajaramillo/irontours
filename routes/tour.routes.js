@@ -3,6 +3,7 @@ const Tour = require('../models/tour.model');
 const User = require('../models/user.model');
 const fileUploader = require('../config/cloudinary.config');
 const { isAdmin } = require('../middlewares/auth.middlewares');
+const axios = require("axios");
 
 const {
   isValidationError,
@@ -10,6 +11,29 @@ const {
 } = require('../controllers/auth.controllers');
 
 
+// axios
+async function getWeather(city) {
+  try {
+    const apiKey = process.env.WEATHER_KEY;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    const response = await axios.get(url);
+    //console.log(response);
+    //console.log(response.data)
+    const kelvinToCelsius = (+response.data.main.temp - 273.15).toFixed(2);
+    const weather = {
+      desc: response.data.weather[0].description,
+      icon: `https://openweathermap.org/img/w/${response.data.weather[0].icon}.png`,
+
+      temp: kelvinToCelsius
+    }
+    //console.log(weather)
+    return weather;
+
+  } catch (error) {
+    console.error(error);
+  }
+
+}
 
 // CRUD - Create
 router.get('/tours/create', isAdmin, async (req, res) => {
@@ -95,6 +119,13 @@ router.get('/tours/:id', async (req, res) => {
       : {};
     const isBooked = bookedTours?.includes(id) ? true : false;
     console.log(isBooked);
+
+    const today = new Date();
+    const date = `${today.getFullYear()}-${(today.getMonth()+1)}-${today.getDate()}`
+    // axios
+    const weather = await getWeather(tour.name);
+  
+
     res.render('tour-views/tour-details', {
       tour,
       isLoggedIn,
@@ -102,6 +133,8 @@ router.get('/tours/:id', async (req, res) => {
       isUser,
       userImage,
       isBooked,
+      date,
+      weather
     });
   } catch (err) {
     console.error('error', err);
