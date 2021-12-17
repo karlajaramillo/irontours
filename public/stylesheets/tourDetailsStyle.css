@@ -170,6 +170,9 @@
   flex-wrap: wrap;
 }
 
+.wrapper-weather-icon {
+  width: 50px;
+}
 @media all and (min-width: 650px) {
   .wrapper-tour-image::after {
     height: 90px;
