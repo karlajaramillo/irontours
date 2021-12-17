@@ -3,13 +3,12 @@ const Tour = require('../models/tour.model');
 const User = require('../models/user.model');
 const fileUploader = require('../config/cloudinary.config');
 const { isAdmin } = require('../middlewares/auth.middlewares');
-const axios = require("axios");
+const axios = require('axios');
 
 const {
   isValidationError,
   isMongoError,
 } = require('../controllers/auth.controllers');
-
 
 // axios
 async function getWeather(city) {
@@ -24,15 +23,13 @@ async function getWeather(city) {
       desc: response.data.weather[0].description,
       icon: `https://openweathermap.org/img/w/${response.data.weather[0].icon}.png`,
 
-      temp: kelvinToCelsius
-    }
+      temp: kelvinToCelsius,
+    };
     //console.log(weather)
     return weather;
-
   } catch (error) {
     console.error(error);
   }
-
 }
 
 // CRUD - Create
@@ -43,7 +40,12 @@ router.get('/tours/create', isAdmin, async (req, res) => {
 
     const guides = await User.find({ role: 'guide' });
     const { err } = req.query;
-    res.render('tour-views/tour-create', { guides, isLoggedIn, userImage, err });
+    res.render('tour-views/tour-create', {
+      guides,
+      isLoggedIn,
+      userImage,
+      err,
+    });
   } catch (err) {
     console.error('error', err);
     next(err);
@@ -61,16 +63,14 @@ router.post(
 
       // error handling
       const hasMissingNameDescriptionTourGuide =
-        !name || !description || !tourGuide || !lat ||!long;
+        !name || !description || !tourGuide || !lat || !long;
       if (hasMissingNameDescriptionTourGuide) {
-        return res.redirect(
-          '/tours/create?err=Missing credentials'
-        );
+        return res.redirect('/tours/create?err=Missing credentials');
       }
-      const mapData = { 
-        type: "Point", 
-        coordinates: [long, lat]
-      }
+      const mapData = {
+        type: 'Point',
+        coordinates: [long, lat],
+      };
       const newTour = await Tour.create({
         name,
         description,
@@ -122,19 +122,25 @@ router.get('/tours/:id', async (req, res) => {
 
     const today = new Date();
     //const date = `${today.getFullYear()}-${(today.getMonth()+1)}-${today.getDate()}`
- 
 
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const days = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ];
     const dayName = days[today.getDay()];
 
-    const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+    const event = new Date();
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
     const date = event.toLocaleDateString('en-US', options);
 
     // axios
     const weather = await getWeather(tour.name);
-  
 
     res.render('tour-views/tour-details', {
       tour,
@@ -145,7 +151,7 @@ router.get('/tours/:id', async (req, res) => {
       isBooked,
       weather,
       date,
-      dayName
+      dayName,
     });
   } catch (err) {
     console.error('error', err);
@@ -164,7 +170,13 @@ router.get('/tours/:id/edit', isAdmin, async (req, res) => {
     const tour = await Tour.findById(id).populate('tourGuide');
     const guides = await User.find({ role: 'guide' });
     //const user = req.session.currentUser;
-    res.render('tour-views/tour-update', { tour, guides, isLoggedIn, userImage, err });
+    res.render('tour-views/tour-update', {
+      tour,
+      guides,
+      isLoggedIn,
+      userImage,
+      err,
+    });
   } catch (err) {
     console.error('error', err);
     next(err);
@@ -185,15 +197,13 @@ router.post(
       const hasMissingNameDescriptionTourGuide =
         !name || !description || !tourGuide || !lat || !long;
       if (hasMissingNameDescriptionTourGuide) {
-        return res.redirect(
-          `/tours/${id}/edit?err=Missing credentials`
-        );
+        return res.redirect(`/tours/${id}/edit?err=Missing credentials`);
       }
 
-      const mapData = { 
-        type: "Point", 
-        coordinates: [long, lat]
-      }
+      const mapData = {
+        type: 'Point',
+        coordinates: [long, lat],
+      };
 
       const tour = await Tour.findByIdAndUpdate(
         id,
@@ -236,7 +246,6 @@ router.get('/tours/:id/delete', isAdmin, async (req, res) => {
   }
 });
 
-
 // CRUD - Update tour - add locations - only Admin
 router.get('/tours/:id/addLocations', isAdmin, async (req, res) => {
   try {
@@ -248,7 +257,12 @@ router.get('/tours/:id/addLocations', isAdmin, async (req, res) => {
     const tour = await Tour.findById(id).populate('tourGuide');
     //const user = req.session.currentUser;
     //res.send('hello')
-    res.render('tour-views/tour-addLocations', { tour, isLoggedIn, userImage, err });
+    res.render('tour-views/tour-addLocations', {
+      tour,
+      isLoggedIn,
+      userImage,
+      err,
+    });
   } catch (err) {
     console.error('error', err);
     next(err);
@@ -265,10 +279,10 @@ router.post('/tours/:id/addLocations', isAdmin, async (req, res) => {
 
     const location = {
       description,
-      coordinates: [long, lat]
-    }
+      coordinates: [long, lat],
+    };
 
-    console.log(location)
+    console.log(location);
     const newTour = await Tour.findByIdAndUpdate(
       id,
       {
@@ -277,8 +291,7 @@ router.post('/tours/:id/addLocations', isAdmin, async (req, res) => {
       { new: true }
     );
 
-    res.redirect(`/tours/${id}`)
-    
+    res.redirect(`/tours/${id}`);
   } catch (err) {
     console.error('error', err);
     next(err);
