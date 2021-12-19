@@ -61,7 +61,7 @@
         <button type='submit' class='profile-form-btn'>Save Changes</button>
       </form>
       {{#ifEquals user.role "admin"}}
-        <a href="/tours/create">Create a Tour</a>
+        <a class="create-btn" href="/tours/create">Create a Tour</a>
       {{/ifEquals}}
     {{#if err}}
       <p class='signup-error'>{{err}}</p>

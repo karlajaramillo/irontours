@@ -207,3 +207,20 @@ label {
   background-image: linear-gradient(120deg, #4a454b, #4d5253);
   color: white;
 }
+
+
+.create-btn {
+  padding: 8px 20px;
+  color: #281929;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid #281929;
+  margin-top: 10px;
+  font-size: .9rem;
+}
+
+.create-btn:hover {
+  background-color: #281929;
+  color: #fff;
+  border: 1px solid #fff;
+}
