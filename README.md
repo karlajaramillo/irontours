@@ -109,12 +109,12 @@ The url to your repository and to your deployed project
 
 [Repository Link](https://github.com/karlajaramillo/irontours)
 
-[Deploy Link](http://heroku.com)
+[Deploy Link](https://irontours.herokuapp.com)
 
 ### Slides
 
 The url to your presentation slides
 
-[Slides Link](http://slides.com)
+[Slides Link](https://docs.google.com/presentation/d/1ID3YVjUAl_WkPlTbIyOJ54M1rkpECa5a-JcYlxU6Ayk/edit?usp=sharing)
 
 
